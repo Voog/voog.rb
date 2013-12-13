@@ -1,3 +1,5 @@
+require 'edicy/version'
+require 'edicy/client'
 require 'rest-client'
 
 module Edicy
@@ -36,22 +38,11 @@ module Edicy
 
     def respond_to?(method_name, include_private=false); client.respond_to?(method_name, include_private) || super; end if RUBY_VERSION < "1.9"
 
-  private
+    private
 
     def method_missing(method_name, *args, &block)
       return super unless client.respond_to?(method_name)
       client.send(method_name, *args, &block)
     end
   end
-
-  autoload :Version, "./edicy/version"
-  autoload :Client, "./edicy/client"
-  autoload :API, "./edicy/api"
-
 end
-
-# Assign test data on module load, for development purposes
-# Edicy.configure do |config|
-#   config.site = "edicy.local"
-#   config.api_token = "afcf30182aecfc8155d390d7d4552d14"
-# end

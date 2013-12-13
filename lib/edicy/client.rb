@@ -1,8 +1,9 @@
-require './edicy/api.rb'
-require './edicy/api/layouts.rb'
+require 'edicy/api'
+require 'edicy/api/layouts'
 
 module Edicy
   class Client
+    
     include Edicy::API::Requests
     include Edicy::API::Layouts
 
@@ -20,5 +21,4 @@ module Edicy
     end
 
   end
-
 end

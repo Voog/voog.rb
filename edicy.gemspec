@@ -6,8 +6,8 @@ require 'edicy/version'
 Gem::Specification.new do |spec|
   spec.name          = 'edicy'
   spec.version       = Edicy::VERSION
-  spec.authors       = ['Priit Haamer']
-  spec.email         = ['priit@fraktal.ee']
+  spec.authors       = ['Priit Haamer', 'Mikk Pristavka']
+  spec.email         = ['priit@edicy.com', 'mikk@fraktal.ee']
   spec.description   = %q{Best API wrapper for the best website builder}
   spec.summary       = %q{Ruby toolkit for the Edicy API}
   spec.homepage      = ''
@@ -19,5 +19,8 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_development_dependency 'bundler', '~> 1.3'
+  spec.add_development_dependency 'guard-rspec', '~> 4.2.0'
+  spec.add_development_dependency 'rspec', '~> 2.14.1'
+  spec.add_development_dependency 'webmock', '~> 1.16.0'
   spec.add_development_dependency 'rake'
 end
