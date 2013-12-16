@@ -3,6 +3,9 @@
     {
       "id": 1,
       "title": "My layout"
+    }, {
+      "id": 2,
+      "title": "My other layout"
     }
   ]
 }

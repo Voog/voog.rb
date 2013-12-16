@@ -1,5 +1,6 @@
 require 'edicy/api'
 require 'edicy/api/layouts'
+require 'ostruct'
 
 module Edicy
   class Client
@@ -18,6 +19,14 @@ module Edicy
 
     def api_header
       { "X-API-TOKEN" => @api_token }
+    end
+
+    def h2o(hash)
+      hash.is_a?(Hash) ?
+        OpenStruct.new(hash.keys.each_with_object({}) { |e, h| 
+          h[e] = h2o(hash[e]) 
+        }) :
+        hash
     end
 
   end

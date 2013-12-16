@@ -1,27 +1,44 @@
 module Edicy
   class API
-
-    class Layout
-      attr_accessor :id, :site_id, :parent_id, :title, :layout_name, :content_type, 
-        :body, :component, :url, :created_by, :created_at, :updated_by, :updated_at
-      
-      def initialize(attributes)
-        attributes.each {|name,value| send("#{name}=",value) if respond_to?("#{name}=")}
-      end
-
-    end
-
     module Layouts
       
       def layouts
-        JSON.parse(get 'layouts').map{ |layout| Layout.new(layout) }
+        @layouts = JSON.parse(get('layouts'))["layouts"]
+        @layouts.map{ |layout| h2o(layout) }
+      rescue RestClient::Exception
+        return false
       end
 
       def layout(id)
-        Layout.new(JSON.parse(get "layouts/#{id}"))
+        @layout = JSON.parse(get("layouts/#{id}"))["layout"]
+        h2o(@layout)
+      rescue RestClient::Exception
+        return false
+      end
+
+      def delete_layout(id)
+        delete("layouts/#{id}").code == 200
+      rescue RestClient::Exception
+        return false
+      end
+
+      def update_layout(id, data)
+        @layout = JSON.parse(
+          put("layouts/#{id}", 
+          JSON.dump({ "layout" => data }))
+        )["layout"]
+        h2o(@layout)
+      rescue RestClient::Exception
+        return false
+      end
+
+      def create_layout(data)
+        @layout = JSON.parse(post("layouts", { "layout" => data }))["layout"]
+        h2o(@layout)
+      rescue RestClient::Exception
+        return false
       end
 
     end
-
   end
 end
