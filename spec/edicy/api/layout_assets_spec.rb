@@ -62,7 +62,7 @@ describe Edicy::API::LayoutAssets do
 
       @old_layout_asset = @client.layout_asset(2)
       @data = { "title" => "Updated title" }
-      @new_data = '{ "layout_asset": { "id": 2, "title": "Updated title" } }'
+      @new_data = '{ "asset": { "id": 2, "title": "Updated title" } }'
       stub_request(:put, 'http://edicy.test/admin/api/layout_assets/2').
         with(headers: { 'X-API-TOKEN' => @client.api_token }).
         to_return(body: @new_data)

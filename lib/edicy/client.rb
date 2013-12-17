@@ -23,10 +23,10 @@ module Edicy
       { "X-API-TOKEN" => @api_token }
     end
 
-    def h2o(hash)
+    def hash2openstruct(hash)
       hash.is_a?(Hash) ?
         OpenStruct.new(hash.keys.each_with_object({}) { |e, h| 
-          h[e] = h2o(hash[e]) 
+          h[e] = hash2openstruct(hash[e]) 
         }) :
         hash
     end

@@ -3,15 +3,15 @@ module Edicy
     module LayoutAssets
       
       def layout_assets
-        @layout_assets = JSON.parse(get('layout_assets'))["layout_assets"]
-        @layout_assets.map{ |layout_asset| h2o(layout_asset) }
+        @layout_assets = JSON.parse(get('layout_assets'))["assets"]
+        @layout_assets.map! { |layout_asset| hash2openstruct(layout_asset) }
       rescue RestClient::Exception
         return false
       end
 
       def layout_asset(id)
-        @layout_asset = JSON.parse(get("layout_assets/#{id}"))["layout_asset"]
-        h2o(@layout_asset)
+        @layout_asset = JSON.parse(get("layout_assets/#{id}"))["asset"]
+        hash2openstruct(@layout_asset)
       rescue RestClient::Exception
         return false
       end
@@ -25,16 +25,16 @@ module Edicy
       def update_layout_asset(id, data)
         @layout_asset = JSON.parse(
           put("layout_assets/#{id}", 
-          JSON.dump({ "layout_asset" => data }))
-        )["layout_asset"]
-        h2o(@layout_asset)
+          JSON.dump({ "asset" => data }))
+        )["asset"]
+        hash2openstruct(@layout_asset)
       rescue RestClient::Exception
         return false
       end
 
       def create_layout_asset(data)
-        @layout_asset = JSON.parse(post("layout_assets", { "layout_asset" => data }))["layout_asset"]
-        h2o(@layout_asset)
+        @layout_asset = JSON.parse(post("layout_assets", { "asset" => data }))["asset"]
+        hash2openstruct(@layout_asset)
       rescue RestClient::Exception
         return false
       end

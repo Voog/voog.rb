@@ -4,14 +4,14 @@ module Edicy
       
       def layouts
         @layouts = JSON.parse(get('layouts'))["layouts"]
-        @layouts.map{ |layout| h2o(layout) }
+        @layouts.map{ |layout| hash2openstruct(layout) }
       rescue RestClient::Exception
         return false
       end
 
       def layout(id)
         @layout = JSON.parse(get("layouts/#{id}"))["layout"]
-        h2o(@layout)
+        hash2openstruct(@layout)
       rescue RestClient::Exception
         return false
       end
@@ -27,14 +27,14 @@ module Edicy
           put("layouts/#{id}", 
           JSON.dump({ "layout" => data }))
         )["layout"]
-        h2o(@layout)
+        hash2openstruct(@layout)
       rescue RestClient::Exception
         return false
       end
 
       def create_layout(data)
         @layout = JSON.parse(post("layouts", { "layout" => data }))["layout"]
-        h2o(@layout)
+        hash2openstruct(@layout)
       rescue RestClient::Exception
         return false
       end
