@@ -1,5 +1,6 @@
 require 'edicy/api'
 require 'edicy/api/layouts'
+require 'edicy/api/layout_assets'
 require 'ostruct'
 
 module Edicy
@@ -7,6 +8,7 @@ module Edicy
     
     include Edicy::API::Requests
     include Edicy::API::Layouts
+    include Edicy::API::LayoutAssets
 
     attr_reader :api_token, :site
 

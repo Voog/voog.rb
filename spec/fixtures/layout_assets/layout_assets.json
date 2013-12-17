@@ -1,0 +1,9 @@
+{
+  "layout_assets": [{
+    "id": 1,
+    "title": "Layout asset 1"
+  }, {
+    "id": 2,
+    "title": "Another asset"
+  }]
+}
