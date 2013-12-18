@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'edicy/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'edicy'
+  spec.name          = 'edicy-api'
   spec.version       = Edicy::VERSION
   spec.authors       = ['Priit Haamer', 'Mikk Pristavka']
   spec.email         = ['priit@edicy.com', 'mikk@fraktal.ee']
