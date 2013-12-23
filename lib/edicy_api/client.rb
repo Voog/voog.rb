@@ -1,6 +1,6 @@
-require 'edicy/api'
-require 'edicy/api/layouts'
-require 'edicy/api/layout_assets'
+require 'edicy_api/api'
+require 'edicy_api/api/layouts'
+require 'edicy_api/api/layout_assets'
 require 'ostruct'
 
 module Edicy

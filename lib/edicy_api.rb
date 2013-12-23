@@ -1,5 +1,5 @@
-require 'edicy/version'
-require 'edicy/client'
+require 'edicy_api/version'
+require 'edicy_api/client'
 require 'rest-client'
 
 module Edicy

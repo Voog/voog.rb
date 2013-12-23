@@ -1,7 +1,7 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'edicy/version'
+require 'edicy_api/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'edicy-api'
@@ -23,4 +23,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec', '~> 2.14.1'
   spec.add_development_dependency 'webmock', '~> 1.16.0'
   spec.add_development_dependency 'rake'
+  spec.add_runtime_dependency 'rest-client'
 end
