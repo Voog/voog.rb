@@ -5,28 +5,15 @@ require 'rest-client'
 module Edicy
 
   class << self
+    
     attr_accessor :site, :api_token
 
-    def client(options={})
+    def client(options = {})
       unless site.nil? && api_token.nil?
-        @client ||= Edicy::Client.new(site, api_token, options)
+        Edicy::Client.new(site, api_token, options)
       else
-        @client = nil
+        nil
       end
-      @client
-    end
-
-    def api
-      unless @site.nil?
-        @api ||= RestClient::Resource.new("#{site}#{Edicy::API::API_PATH}") 
-      else 
-        nil 
-      end
-    end
-
-    def site=(s)
-      @site = s
-      @api = api
     end
 
     def configure
@@ -34,9 +21,21 @@ module Edicy
       true
     end
 
-    def respond_to_missing?(method_name, include_private=false); client.respond_to?(method_name, include_private); end if RUBY_VERSION >= "1.9"
+    if RUBY_VERSION >= '1.9'
+      
+      def respond_to_missing?(method_name, include_private = false)
+        client.respond_to?(method_name, include_private)
+      end
+      
+    end
 
-    def respond_to?(method_name, include_private=false); client.respond_to?(method_name, include_private) || super; end if RUBY_VERSION < "1.9"
+    if RUBY_VERSION < '1.9'
+      
+      def respond_to?(method_name, include_private = false)
+        client.respond_to?(method_name, include_private) || super
+      end
+      
+    end
 
     private
 

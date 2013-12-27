@@ -6,6 +6,7 @@ module Edicy
         @layouts = JSON.parse(get('layouts'))["layouts"]
         @layouts.map{ |layout| hash2openstruct(layout) }
       rescue RestClient::Exception
+        # TODO: Do not fail so silently. Should pass exception to client.
         return false
       end
 
@@ -16,29 +17,25 @@ module Edicy
         return false
       end
 
-      def delete_layout(id)
-        delete("layouts/#{id}").code == 200
+      def create_layout(data)
+        @layout = JSON.parse(post("layouts", {"layout" => data}))["layout"]
+        hash2openstruct(@layout)
       rescue RestClient::Exception
         return false
       end
 
       def update_layout(id, data)
-        @layout = JSON.parse(
-          put("layouts/#{id}", 
-          JSON.dump({ "layout" => data }))
-        )["layout"]
+        @layout = JSON.parse(put("layouts/#{id}", JSON.dump({"layout" => data})))["layout"]
         hash2openstruct(@layout)
       rescue RestClient::Exception
         return false
       end
 
-      def create_layout(data)
-        @layout = JSON.parse(post("layouts", { "layout" => data }))["layout"]
-        hash2openstruct(@layout)
+      def delete_layout(id)
+        delete("layouts/#{id}").code == 200
       rescue RestClient::Exception
         return false
       end
-
     end
   end
 end

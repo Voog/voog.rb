@@ -12,24 +12,25 @@ module Edicy
 
     attr_reader :api_token, :site
 
-    def initialize( site=Edicy.site, api_token=Edicy.api_token, options={} )
+    def initialize(site = Edicy.site, api_token = Edicy.api_token, options = {})
       @site = site
       @api_token = api_token
-      @api = Edicy.api
+      @api = RestClient::Resource.new("#{site}#{Edicy::API::API_PATH}") 
       @options = options
     end
 
     def api_header
-      { "X-API-TOKEN" => @api_token }
+      {"X-API-TOKEN" => @api_token}
     end
 
     def hash2openstruct(hash)
-      hash.is_a?(Hash) ?
+      if hash.is_a?(Hash)
         OpenStruct.new(hash.keys.each_with_object({}) { |e, h| 
           h[e] = hash2openstruct(hash[e]) 
-        }) :
+        })
+      else
         hash
+      end
     end
-
   end
 end
