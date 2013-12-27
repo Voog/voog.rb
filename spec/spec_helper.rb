@@ -1,4 +1,4 @@
-require 'edicy'
+require 'edicy_api'
 require 'webmock/rspec'
 
 WebMock.disable_net_connect!

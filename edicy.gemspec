@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'edicy_api/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'edicy-api'
+  spec.name          = 'edicy_api'
   spec.version       = Edicy::VERSION
   spec.authors       = ['Priit Haamer', 'Mikk Pristavka']
   spec.email         = ['priit@edicy.com', 'mikk@fraktal.ee']
@@ -21,7 +21,8 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'bundler', '~> 1.3'
   spec.add_development_dependency 'guard-rspec', '~> 4.2.0'
   spec.add_development_dependency 'rspec', '~> 2.14.1'
-  spec.add_development_dependency 'webmock', '~> 1.16.0'
+  spec.add_development_dependency 'webmock', '1.16.0'
   spec.add_development_dependency 'rake'
+  
   spec.add_runtime_dependency 'rest-client'
 end

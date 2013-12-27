@@ -6,7 +6,7 @@ Ruby toolkit for the Edicy API.
 
 Add this line to your application's Gemfile:
 
-    gem 'edicy'
+    gem 'edicy_api'
 
 And then execute:
 
@@ -14,7 +14,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install edicy
+    $ gem install edicy_api
 
 ## Usage
 
