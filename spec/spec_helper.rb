@@ -28,3 +28,19 @@ end
 def fixture(file)
   File.read(File.expand_path('../fixtures', __FILE__) + '/' + file + '.json')
 end
+
+def request_fixture(method, path, options = {})
+  request = ({
+    headers: {'X-API-TOKEN' => 'afcf30182aecfc8155d390d7d4552d14'}
+  }).merge(options.fetch(:request, {}))
+  
+  response = ({headers: {'Content-Type' => 'application/json'}}).tap { |response|
+    response[:body] = fixture(options[:fixture]) if options.has_key?(:fixture)
+  }.merge(options.fetch(:response, {}))
+  
+  stub_request(method, edicy_url(path)).with(request).to_return(response)
+end
+
+def edicy_url(path)
+  "http://edicy.test/admin/api/#{path}"
+end

@@ -10,11 +10,10 @@ Gem::Specification.new do |spec|
   spec.email         = ['priit@edicy.com', 'mikk@fraktal.ee']
   spec.description   = %q{Best API wrapper for the best website builder}
   spec.summary       = %q{Ruby toolkit for the Edicy API}
-  spec.homepage      = ''
+  spec.homepage      = 'https://github.com/Edicy/edicy.rb'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files`.split($/)
-  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ['lib']
 
@@ -24,5 +23,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'webmock', '1.16.0'
   spec.add_development_dependency 'rake'
   
-  spec.add_runtime_dependency 'rest-client'
+  spec.add_dependency 'sawyer', '~> 0.5.2'
 end

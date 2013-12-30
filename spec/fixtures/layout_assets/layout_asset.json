@@ -1,6 +1,4 @@
 {
-  "asset": {
-    "id": 2,
-    "title": "Another asset"
-  }
+  "id": 2,
+  "filename": "asset.css"
 }
