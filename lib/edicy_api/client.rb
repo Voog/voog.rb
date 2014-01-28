@@ -25,31 +25,31 @@ module Edicy
     end
 
     def get(url, options = {})
-      request :get, url, options
+      request :get, url, nil, options
     end
     
-    def post(url, options = {})
-      request :post, url, options
+    def post(url, data, options = {})
+      request :post, url, data, options
     end
 
-    def put(url, options = {})
-      request :put, url, options
+    def put(url, data, options = {})
+      request :put, url, data, options
     end
 
-    def patch(url, options = {})
-      request :patch, url, options
+    def patch(url, data, options = {})
+      request :patch, url, data, options
     end
 
     def delete(url, options = {})
-      request :delete, url, options
+      request :delete, url, nil, options
     end
 
     def head(url, options = {})
-      request :head, url, options
+      request :head, url, nil, options
     end
     
     def api_endpoint
-      "http://#{site}"
+      "http://#{site}/admin/api"
     end
     
     def agent
@@ -68,8 +68,6 @@ module Edicy
     private
     
     def request(method, path, data, options = {})
-      path = "/admin/api/#{path}"
-
       @last_response = response = agent.call(method, URI.encode(path.to_s), data, options)
       response.data
     end

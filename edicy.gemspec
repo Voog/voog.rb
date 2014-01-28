@@ -6,8 +6,8 @@ require 'edicy_api/version'
 Gem::Specification.new do |spec|
   spec.name          = 'edicy_api'
   spec.version       = Edicy::VERSION
-  spec.authors       = ['Priit Haamer', 'Mikk Pristavka']
-  spec.email         = ['priit@edicy.com', 'mikk@fraktal.ee']
+  spec.authors       = ['Priit Haamer', 'Mikk Pristavka', 'Tanel Jakobsoo']
+  spec.email         = ['priit@edicy.com', 'mikk@fraktal.ee', 'tanel@fraktal.ee']
   spec.description   = %q{Best API wrapper for the best website builder}
   spec.summary       = %q{Ruby toolkit for the Edicy API}
   spec.homepage      = 'https://github.com/Edicy/edicy.rb'
