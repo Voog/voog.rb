@@ -74,7 +74,8 @@ module Edicy
     
     def sawyer_options
       opts = {
-        faraday: Faraday.new
+        faraday: Faraday.new,
+        links_parser: Sawyer::LinkParsers::Simple.new
       }
 
       opts
