@@ -1,0 +1,104 @@
+{
+  "id": 2,
+  "title": "Contact",
+  "created_at": "2014-01-14T11:43:42.000Z",
+  "updated_at": "2014-01-14T11:44:07.000Z",
+  "url": "http://edicy.test/admin/api/forms/2",
+  "content": {
+    "id": 2,
+    "name": "body",
+    "position": 2,
+    "created_at": "2014-01-14T11:43:42.000Z",
+    "updated_at": "2014-01-14T11:43:42.000Z",
+    "url": "http://edicy.test/admin/api/pages/3/contents/2"
+  },
+  "parent": {
+    "id": 3,
+    "type": "page",
+    "created_at": "2014-01-14T11:43:37.000Z",
+    "updated_at": "2014-01-14T11:43:37.000Z",
+    "url": "http://edicy.test/admin/api/pages/3"
+  },
+  "description": null,
+  "fields": [{
+    "id": "field_1389863908580",
+    "type": "textfield",
+    "title": "Simple text field",
+    "required": false,
+    "field_size": "small",
+    "classname": "my-field",
+    "placeholder": "This is placeholder"
+  }, {
+    "id": "field_1389863978349",
+    "type": "textfield",
+    "title": "Email field",
+    "required": false,
+    "field_size": "medium",
+    "format": "email",
+    "classname": "my-email-field",
+    "placeholder": "Enter your email"
+  }, {
+    "id": "field_1389864022045",
+    "type": "textfield",
+    "title": "Web addres",
+    "required": false,
+    "field_size": "large",
+    "format": "webaddress",
+    "classname": "my-web-field",
+    "placeholder": "http://"
+  }, {
+    "id": "field_1389864067243",
+    "type": "textarea",
+    "title": "Multiline text",
+    "required": false,
+    "field_size": "large",
+    "classname": "my-multiline-field",
+    "placeholder": "Enter your story"
+  }, {
+    "id": "field_1389864095155",
+    "type": "select",
+    "title": "Select list",
+    "required": false,
+    "options": [
+      "Option 1",
+      "Option 2",
+      "Option 3"
+    ],
+    "classname": "my-select"
+  }, {
+    "id": "field_1389864130096",
+    "type": "checkbox",
+    "title": "Checkboxes",
+    "required": false,
+    "options": [
+      "Checkbox 1",
+      "Checkbox 2",
+      "Checkbox 3"
+    ],
+    "classname": "my-checkboxes"
+  }, {
+    "id": "field_1389864153264",
+    "type": "radio",
+    "title": "Single choice",
+    "required": false,
+    "options": [
+      "Choice 1",
+      "Choice 2",
+      "Choice 3"
+    ],
+    "classname": "my-radiobuttons"
+  }, {
+    "id": "field_1389864181776",
+    "type": "file",
+    "title": "File upload",
+    "required": false,
+    "classname": "my-file-upload-field"
+  }],
+  "submit_emails": "test@example.com",
+  "submit_label": "Send form",
+  "submit_email_subject": "Email from page",
+  "submit_action": null,
+  "submit_success_message": null,
+  "submit_success_address": null,
+  "submit_failure_message": null
+}
