@@ -1,0 +1,13 @@
+{
+  "id": 2,
+  "code": "fr",
+  "title": "FRA",
+  "site_title": "Mon nouveau site",
+  "position": 2,
+  "default_language": false,
+  "created_at": "2014-01-21T14:43:48.000Z",
+  "updated_at": "2014-01-21T14:43:48.000Z",
+  "url": "http://edicy.test/admin/api/languages/2",
+  "move_url": "http://edicy.test/admin/api/languages/2/move",
+  "pages_url": "http://edicy.test/admin/api/pages?language_id=2"
+}
