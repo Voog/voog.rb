@@ -1,6 +1,7 @@
 require 'sawyer'
 
 require 'edicy_api/api/articles'
+require 'edicy_api/api/contents'
 require 'edicy_api/api/forms'
 require 'edicy_api/api/languages'
 require 'edicy_api/api/layouts'
@@ -18,6 +19,7 @@ module Edicy
   class Client
     
     include Edicy::API::Articles
+    include Edicy::API::Contents
     include Edicy::API::Forms
     include Edicy::API::Languages
     include Edicy::API::Layouts
