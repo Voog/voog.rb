@@ -7,6 +7,7 @@ require 'edicy_api/api/layout_assets'
 require 'edicy_api/api/nodes'
 require 'edicy_api/api/site'
 require 'edicy_api/api/pages'
+require 'edicy_api/api/people'
 require 'edicy_api/api/tags'
 
 module Edicy
@@ -20,6 +21,7 @@ module Edicy
     include Edicy::API::LayoutAssets
     include Edicy::API::Nodes
     include Edicy::API::Pages
+    include Edicy::API::People
     include Edicy::API::Tags
 
     attr_reader :api_token, :host

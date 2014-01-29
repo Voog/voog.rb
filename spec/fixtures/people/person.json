@@ -1,0 +1,14 @@
+{
+  "id": 2,
+  "firstname": null,
+  "lastname": null,
+  "name": "api@example.com",
+  "email": "api@example.com",
+  "working_language": "en",
+  "status": "ACTIVATED",
+  "owner": true,
+  "created_at": "2014-01-23T10:03:04.000Z",
+  "updated_at": "2014-01-24T13:01:22.000Z",
+  "last_login_at": "2014-01-24T13:01:22.000Z",
+  "url": "http://edicy.test/admin/api/people/2"
+}
