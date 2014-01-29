@@ -1,0 +1,30 @@
+{
+  "meta_keywords": "my key words",
+  "created_at": "2014-01-03T09:19:04.000Z",
+  "updated_at": "2014-01-22T14:58:01.000Z",
+  "search_enabled": false,
+  "data": {
+    "my_key_1": "Value 1",
+    "my_key_2": 2
+  },
+  "public_url": "http://edicy.test/",
+  "data_usage": 332682,
+  "subscription": {
+    "subscription_plan": "plus",
+    "subscription_period": "1M",
+    "subscription_started_at": "2014-01-03T09:19:05.000Z",
+    "subscription_expires_at": "2014-02-03T09:19:05.000Z",
+    "active": true,
+    "type": "trial"
+  },
+  "stats": {
+    "webtools_verify_key": "googlef52f1d814b8972e9.html",
+    "stats_google_analytics": "<script type=\"text/javascript\">\n\n var _gaq = _gaq || [];\n _gaq.push(['_setAccount', 'UA-XXXXXXX-X']);\n _gaq.push(['_setDomainName', 'helloworld.edicy.co']);\n</script>",
+    "stats_compete": "",
+    "stats_chartbeat": "",
+    "stats_custom": "",
+    "stats_edicy_code": "<script type=\"text/javascript\">\nvar _ews = _ews || {_account: 'A-36-1', _tzo: '7200'};</script>",
+    "stats_edicy_timezone": "Tallinn",
+    "stats_edicy_utc_offset": 7200
+  }
+}
