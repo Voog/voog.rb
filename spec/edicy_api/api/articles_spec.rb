@@ -61,4 +61,18 @@ describe Edicy::API::Articles do
       expect(client.update_article_data(2, 'my_key', 'New key').data.my_key).to eq('New key')
     end
   end
+
+  describe '#article_content' do
+    before do
+      request_fixture(:get, 'articles/1/contents/2', fixture: 'contents/content')
+    end
+
+    it 'returns a single content' do
+      expect(client.content(Edicy::API::Contents::ParentKind::Article, 1, 2).name).to eq('slogan')
+    end
+
+    it 'returns a content with the same id as in the request' do
+      expect(client.content(Edicy::API::Contents::ParentKind::Article, 1, 2).id).to eq(2)
+    end
+  end
 end

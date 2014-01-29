@@ -40,6 +40,33 @@ module Edicy
       def delete_article_data(article_id, id)
         delete "articles/#{article_id}/data/#{id}"
       end
+
+      # Article contents
+
+      # List contents for article
+      def article_contents(id, params = {})
+        contents(Edicy::API::Contents::ParentKind::Article, id, params)
+      end
+
+      # Get a single content for article
+      def article_content(article_id, id, params = {})
+        content(Edicy::API::Contents::ParentKind::Article, article_id, id, params)
+      end
+
+      # Create a article content for article
+      def create_article_content(article_id, data)
+        create_content(Edicy::API::Contents::ParentKind::Article, article_id, data)
+      end
+
+      # Delete a content from article
+      def delete_article_content(article_id, id)
+        delete_content(Edicy::API::Contents::ParentKind::Article, article_id, id)
+      end
+
+      # Reorder/move article content inside/between content areas and parent objects
+      def move_article_content(article_id, id, params = {})
+        move_content(Edicy::API::Contents::ParentKind::Article, article_id, id, params)
+      end
     end
   end
 end

@@ -72,4 +72,18 @@ describe Edicy::API::Languages do
       expect(client.enable_language_autodetect).to be_nil
     end
   end
+
+  describe '#language_content' do
+    before do
+      request_fixture(:get, 'languages/1/contents/2', fixture: 'contents/content')
+    end
+
+    it 'returns a single content' do
+      expect(client.content(Edicy::API::Contents::ParentKind::Language, 1, 2).name).to eq('slogan')
+    end
+
+    it 'returns a content with the same id as in the request' do
+      expect(client.content(Edicy::API::Contents::ParentKind::Language, 1, 2).id).to eq(2)
+    end
+  end
 end

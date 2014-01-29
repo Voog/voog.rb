@@ -36,6 +36,33 @@ module Edicy
       def enable_language_autodetect
         put "languages/enable_autodetect", nil, nil
       end
+
+      # Language contents
+
+      # List contents for language
+      def language_contents(id, params = {})
+        contents(Edicy::API::Contents::ParentKind::Language, id, params)
+      end
+
+      # Get a single content for language
+      def language_content(language_id, id, params = {})
+        content(Edicy::API::Contents::ParentKind::Language, language_id, id, params)
+      end
+
+      # Create a language content for language
+      def create_language_content(language_id, data)
+        create_content(Edicy::API::Contents::ParentKind::Language, language_id, data)
+      end
+
+      # Delete a content from language
+      def delete_language_content(language_id, id)
+        delete_content(Edicy::API::Contents::ParentKind::Language, language_id, id)
+      end
+
+      # Reorder/move language content inside/between content areas and parent objects
+      def move_language_content(language_id, id, params = {})
+        move_content(Edicy::API::Contents::ParentKind::Language, language_id, id, params)
+      end
     end
   end
 end
