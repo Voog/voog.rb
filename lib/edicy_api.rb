@@ -5,11 +5,11 @@ module Edicy
 
   class << self
     
-    attr_accessor :site, :api_token
+    attr_accessor :host, :api_token
 
     def client(options = {})
-      unless site.nil? && api_token.nil?
-        Edicy::Client.new(site, api_token, options)
+      unless host.nil? && api_token.nil?
+        Edicy::Client.new(host, api_token, options)
       else
         nil
       end

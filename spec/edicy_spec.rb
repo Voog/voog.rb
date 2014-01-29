@@ -4,12 +4,12 @@ describe Edicy do
   
   describe '.configure' do
     
-    it 'sets site' do
+    it 'sets host' do
       Edicy.configure do |config|
-        config.site = 'edicy.local'
+        config.host = 'edicy.local'
       end
       
-      expect(Edicy.site).to eq('edicy.local')
+      expect(Edicy.host).to eq('edicy.local')
     end
     
     it 'sets api token' do
@@ -25,7 +25,7 @@ describe Edicy do
     
     before do
       Edicy.configure do |config|
-        config.site = 'edicy.local'
+        config.host = 'edicy.local'
         config.api_token = 'afcf30182aecfc8155d390d7d4552d14'
       end
     end

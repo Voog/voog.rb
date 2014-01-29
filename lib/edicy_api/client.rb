@@ -16,10 +16,10 @@ module Edicy
     include Edicy::API::Pages
     include Edicy::API::Tags
 
-    attr_reader :api_token, :site
+    attr_reader :api_token, :host
 
-    def initialize(site = Edicy.site, api_token = Edicy.api_token, options = {})
-      @site = site
+    def initialize(host = Edicy.host, api_token = Edicy.api_token, options = {})
+      @host = host
       @api_token = api_token
       @options = options
     end
@@ -49,7 +49,7 @@ module Edicy
     end
     
     def api_endpoint
-      "http://#{site}/admin/api"
+      "http://#{host}/admin/api"
     end
     
     def agent

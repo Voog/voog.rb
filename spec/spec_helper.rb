@@ -19,7 +19,7 @@ end
 
 def edicy_client
   Edicy.configure do |config|
-    config.site = 'edicy.test'
+    config.host = 'edicy.test'
     config.api_token = 'afcf30182aecfc8155d390d7d4552d14'
   end
   Edicy.client
