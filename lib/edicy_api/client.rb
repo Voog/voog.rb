@@ -18,10 +18,10 @@ module Edicy
     include Edicy::API::Languages
     include Edicy::API::Layouts
     include Edicy::API::LayoutAssets
-    include Edicy::API::LayoutAssets
     include Edicy::API::Nodes
     include Edicy::API::Pages
     include Edicy::API::People
+    include Edicy::API::Site
     include Edicy::API::Tags
 
     attr_reader :api_token, :host
