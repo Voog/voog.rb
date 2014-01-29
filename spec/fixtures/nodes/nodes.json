@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Home Page",
+    "parent_id": null,
+    "position": 1,
+    "created_at": "2014-01-24T09:19:04.000Z",
+    "updated_at": "2014-01-24T09:19:04.000Z",
+    "url": "http://edicy.test/admin/api/nodes/1",
+    "children_url": "http://edicy.test/admin/api/nodes?parent_id=1",
+    "parent_url": null
+  }, {
+    "id": 2,
+    "title": "Products",
+    "parent_id": 1,
+    "position": 2,
+    "created_at": "2014-01-24T09:19:04.000Z",
+    "updated_at": "2014-01-24T09:19:04.000Z",
+    "url": "http://edicy.test/admin/api/nodes/2",
+    "children_url": "http://edicy.test/admin/api/nodes?parent_id=2",
+    "parent_url": "http://edicy.test/admin/api/nodes/1"
+  }
+]
