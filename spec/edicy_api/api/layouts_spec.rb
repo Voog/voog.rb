@@ -20,7 +20,7 @@ describe Edicy::API::Layouts do
     end
   
     it 'returns a single layout' do
-      expect(client.layout(2).title).to eq('My other layout')
+      expect(client.layout(2).title).to eq('Blog & News')
     end
   
     it 'returns a layout with the same id as in the request' do
