@@ -57,7 +57,7 @@ describe Edicy::API::Languages do
       request_fixture(:put, 'languages/2/move?before=1', response: {body: '{"id": 2, "position": 1}'})
     end
 
-    it 'responds with new title' do
+    it 'responds with new position' do
       expect(client.move_language(2, before: 1).position).to eq(1)
     end
   end
@@ -68,7 +68,7 @@ describe Edicy::API::Languages do
       request_fixture(:put, 'languages/enable_autodetect')
     end
 
-    it 'responds with new title' do
+    it 'responds body should be empty' do
       expect(client.enable_language_autodetect).to be_nil
     end
   end

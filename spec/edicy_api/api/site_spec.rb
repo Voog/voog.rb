@@ -24,7 +24,7 @@ describe Edicy::API::Site do
       request_fixture(:put, 'site', request: {body: {meta_keywords: 'new keys'}}, response: {body: '{"meta_keywords": "new keys"}'})
     end
 
-    it 'responds with settings' do
+    it 'responds with updated meta_keywords' do
       expect(client.update_site(meta_keywords: 'new keys').meta_keywords).to eq('new keys')
     end
   end
@@ -35,7 +35,7 @@ describe Edicy::API::Site do
       request_fixture(:put, 'site/data/my_key', request: {body: {value: 'New key'}}, response: {body: '{"data": {"my_key": "New key"}}'})
     end
 
-    it 'responds with new title' do
+    it 'responds updated data' do
       expect(client.update_site_data('my_key', 'New key').data.my_key).to eq('New key')
     end
   end

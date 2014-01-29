@@ -57,7 +57,7 @@ describe Edicy::API::Pages do
       request_fixture(:put, 'pages/2/data/my_key', request: {body: {value: 'New key'}}, response: {body: '{"id": 2, "data": {"my_key": "New key"}}'})
     end
 
-    it 'responds with new title' do
+    it 'responds with updated data' do
       expect(client.update_page_data(2, 'my_key', 'New key').data.my_key).to eq('New key')
     end
   end

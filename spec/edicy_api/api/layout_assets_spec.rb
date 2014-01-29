@@ -47,7 +47,7 @@ describe Edicy::API::LayoutAssets do
       request_fixture(:put, 'layout_assets/2', request: {body: {filename: 'new_asset.css'}}, response: {body: '{"id": 2, "filename": "new_asset.css"}'})
     end
     
-    it 'changes title' do
+    it 'changes filename' do
       expect(client.update_layout_asset(2, filename: 'new_asset.css').filename).to eq('new_asset.css')
     end
   end

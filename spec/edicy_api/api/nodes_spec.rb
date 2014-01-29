@@ -45,7 +45,7 @@ describe Edicy::API::Nodes do
       request_fixture(:put, 'nodes/3/move?parent_id=2', response: {body: '{"id": 3, "parent_id": 2, "position": 1}'})
     end
 
-    it 'responds with new title' do
+    it 'responds with parent_id' do
       expect(client.move_node(3, parent_id: 2).parent_id).to eq(2)
     end
   end
