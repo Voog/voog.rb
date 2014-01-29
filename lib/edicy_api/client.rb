@@ -1,5 +1,6 @@
 require 'sawyer'
 
+require 'edicy_api/api/articles'
 require 'edicy_api/api/languages'
 require 'edicy_api/api/layouts'
 require 'edicy_api/api/layout_assets'
@@ -12,6 +13,7 @@ module Edicy
   
   class Client
     
+    include Edicy::API::Articles
     include Edicy::API::Languages
     include Edicy::API::Layouts
     include Edicy::API::LayoutAssets
