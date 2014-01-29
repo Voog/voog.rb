@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "",
+    "created_at": "2014-01-16T08:04:27.000Z",
+    "updated_at": "2014-01-16T08:04:27.000Z",
+    "url": "http://edicy.test/admin/api/media_sets/1",
+    "add_assets_url": "http://edicy.test/admin/api/media_sets/1/add_assets",
+    "content": {
+      "id": 3,
+      "name": "body",
+      "created_at": "2014-01-16T08:04:27.000Z",
+      "updated_at": "2014-01-16T14:56:45.000Z",
+      "position": 3,
+      "url": "http://edicy.test/admin/api/pages/1/contents/3"
+    },
+    "parent": {
+      "id": 1,
+      "created_at": "2013-12-13T09:19:04.000Z",
+      "updated_at": "2013-12-13T09:19:04.000Z",
+      "type": "page",
+      "url": "http://edicy.test/admin/api/pages/1"
+    }
+  }, {
+    "id": 2,
+    "title": "Standalone media set",
+    "created_at": "2014-01-16T08:16:33.000Z",
+    "updated_at": "2014-01-16T08:16:33.000Z",
+    "url": "http://edicy.test/admin/api/media_sets/2",
+    "add_assets_url": "http://edicy.test/admin/api/media_sets/2/add_assets"
+  }
+]

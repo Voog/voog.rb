@@ -5,6 +5,7 @@ require 'edicy_api/api/forms'
 require 'edicy_api/api/languages'
 require 'edicy_api/api/layouts'
 require 'edicy_api/api/layout_assets'
+require 'edicy_api/api/media_sets'
 require 'edicy_api/api/nodes'
 require 'edicy_api/api/site'
 require 'edicy_api/api/pages'
@@ -20,6 +21,7 @@ module Edicy
     include Edicy::API::Languages
     include Edicy::API::Layouts
     include Edicy::API::LayoutAssets
+    include Edicy::API::MediaSets
     include Edicy::API::Nodes
     include Edicy::API::Pages
     include Edicy::API::People
