@@ -20,7 +20,7 @@ describe Edicy::API::LayoutAssets do
     end
   
     it 'returns a single layout_asset' do
-      expect(client.layout_asset(2).filename).to eq('asset.css')
+      expect(client.layout_asset(2).filename).to eq('style.css')
     end
   
     it 'returns a layout_asset with the same id as in the request' do
