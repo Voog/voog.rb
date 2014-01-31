@@ -1,0 +1,20 @@
+{
+  "id": 2,
+  "name": "art",
+  "created_at": "2014-01-31T13:43:36.000Z",
+  "updated_at": "2014-01-31T13:43:36.000Z",
+  "url": "http://helloworld.edicy.co/admin/api/tags/2",
+  "language": {
+    "id": 40,
+    "code": "en",
+    "title": "ENG",
+    "created_at": "2014-01-22T09:19:04.000Z",
+    "updated_at": "2014-01-22T09:19:04.000Z",
+    "url": "http://helloworld.edicy.co/admin/api/languages/40"
+  },
+  "taggings": [{
+    "id": 1,
+    "type": "article",
+    "url": "http://helloworld.edicy.co/admin/api/articles/1"
+  }]
+}
