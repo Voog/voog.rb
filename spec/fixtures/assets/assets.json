@@ -1,0 +1,29 @@
+[
+  {
+    "id": 2,
+    "filename": "report.pdf",
+    "content_type": "application/pdf",
+    "size": 36657,
+    "extension": "pdf",
+    "type": "document",
+    "created_at": "2014-02-04T14:37:41.000Z",
+    "updated_at": "2014-02-04T14:37:41.000Z",
+    "url": "http://edicy.test/admin/api/assets/2",
+    "original_url": "http://media.media.com/0000/0000/0001/files/report.pdf"
+  }, {
+    "id": 1,
+    "filename": "Screen Shot 2014-01-28 at 10.53.26.png",
+    "content_type": "image/png",
+    "size": 95708,
+    "extension": "png",
+    "type": "image",
+    "created_at": "2014-02-04T10:55:28.000Z",
+    "updated_at": "2014-02-04T10:55:30.000Z",
+    "url": "http://edicy.test/admin/api/assets/1",
+    "original_url": "http://media.media.com/0000/0000/0001/photos/Screen%20Shot%202014-01-28%20at%2010.53.26.png",
+    "thumbnail_url": "http://media.media.com/0000/0000/0001/photos/Screen%20Shot%202014-01-28%20at%2010.53.26_large.jpg",
+    "medium_thumbnail_url": "http://media.media.com/0000/0000/0001/photos/Screen%20Shot%202014-01-28%20at%2010.53.26_medium.jpg",
+    "width": 999,
+    "height": 569
+  }
+]
