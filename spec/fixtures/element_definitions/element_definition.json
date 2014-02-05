@@ -1,0 +1,31 @@
+{
+  "id": 2,
+  "title": "Book",
+  "created_at": "2014-02-05T16:06:09.000Z",
+  "updated_at": "2014-02-05T16:06:09.000Z",
+  "url": "http://helloworld.edicy.co/admin/api/element_definitions/2",
+  "data": {
+    "properties": {
+      "isbn": {
+        "data_type": "string",
+        "title": "ISBN",
+        "position": 2
+      },
+      "category": {
+        "data_type": "select",
+        "options": [
+          "Fiction",
+          "Reference",
+          "Cookbooks"
+        ],
+        "title": "Category",
+        "position": 1
+      },
+      "release-date": {
+        "data_type": "date",
+        "title": "Release date",
+        "position": 3
+      }
+    }
+  }
+}
