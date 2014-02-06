@@ -4,6 +4,7 @@ require 'edicy_api/api/articles'
 require 'edicy_api/api/assets'
 require 'edicy_api/api/contents'
 require 'edicy_api/api/element_definitions'
+require 'edicy_api/api/elements'
 require 'edicy_api/api/forms'
 require 'edicy_api/api/languages'
 require 'edicy_api/api/layouts'
@@ -24,6 +25,7 @@ module Edicy
     include Edicy::API::Assets
     include Edicy::API::Contents
     include Edicy::API::ElementDefinitions
+    include Edicy::API::Elements
     include Edicy::API::Forms
     include Edicy::API::Languages
     include Edicy::API::Layouts

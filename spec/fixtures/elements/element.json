@@ -1,0 +1,35 @@
+{
+  "id": 1,
+  "created_at": "24-02-05T11:29:51.000Z",
+  "updated_at": "24-02-05T11:29:51.000Z",
+  "position": 2,
+  "path": "marilyn-monroe",
+  "title": "Marilyn Monroe",
+  "path_with_page": "people/marilyn-monroe",
+  "url": "http://helloworld.edicy.co/admin/api/elements/1",
+  "move_url": "http://helloworld.edicy.co/admin/api/elements/1/move",
+  "public_url": "http://helloworld.edicy.co/people/marilyn-monroe",
+  "element_definition": {
+    "id": 1,
+    "title": "Person",
+    "created_at": "24-02-05T11:22:47.000Z",
+    "updated_at": "24-02-05T11:22:47.000Z",
+    "url": "http://helloworld.edicy.co/admin/api/element_definitions/1"
+  },
+  "page": {
+    "id": 2,
+    "title": "People",
+    "created_at": "24-02-05T11:26:19.000Z",
+    "updated_at": "24-02-05T11:26:42.000Z",
+    "content_type": "elements",
+    "published_at": "24-02-05T11:26:19.000Z",
+    "url": "http://helloworld.edicy.co/admin/api/pages/2"
+  },
+  "values": {
+    "description": "Marilyn Monroe was an American actress, model, and singer.",
+    "photo": "",
+    "birthday": "1926-06-01",
+    "gender": "Female",
+    "public": true
+  }
+}
