@@ -2,6 +2,7 @@ require 'sawyer'
 
 require 'edicy_api/api/articles'
 require 'edicy_api/api/assets'
+require 'edicy_api/api/comments'
 require 'edicy_api/api/contents'
 require 'edicy_api/api/element_definitions'
 require 'edicy_api/api/elements'
@@ -23,6 +24,7 @@ module Edicy
     
     include Edicy::API::Articles
     include Edicy::API::Assets
+    include Edicy::API::Comments
     include Edicy::API::Contents
     include Edicy::API::ElementDefinitions
     include Edicy::API::Elements

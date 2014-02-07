@@ -1,0 +1,21 @@
+{
+  "id": 2,
+  "author": "I'm a Spammer!",
+  "body": "Buy something!",
+  "spam": false,
+  "created_at": "2014-02-07T10:54:08.000Z",
+  "updated_at": "2014-02-07T10:54:08.000Z",
+  "url": "http://helloworld.edicy.co/admin/api/articles/1/comments/2",
+  "article": {
+    "id": 1,
+    "title": "How I wrote my first article",
+    "created_at": "2014-02-07T10:56:07.000Z",
+    "updated_at": "2014-02-07T10:56:07.000Z",
+    "url": "http://helloworld.edicy.co/admin/api/articles/1",
+    "public_url": "http://helloworld.edicy.co/blog/how-i-wrote-my-first-article"
+  },
+  "author_email": "spam@spam.com",
+  "user_ip": "23.81.71.154",
+  "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:27.0) Gecko/20100101 Firefox/27.0",
+  "referrer": "http://helloworld.edicy.co/blog/how-i-wrote-my-first-article"
+}
