@@ -19,7 +19,7 @@
   },
   "stats": {
     "webtools_verify_key": "googlef52f1d814b8972e9.html",
-    "stats_google_analytics": "<script type=\"text/javascript\">\n\n var _gaq = _gaq || [];\n _gaq.push(['_setAccount', 'UA-XXXXXXX-X']);\n _gaq.push(['_setDomainName', 'helloworld.edicy.co']);\n</script>",
+    "stats_google_analytics": "<script type=\"text/javascript\">\n\n var _gaq = _gaq || [];\n _gaq.push(['_setAccount', 'UA-XXXXXXX-X']);\n _gaq.push(['_setDomainName', 'edicy.test']);\n</script>",
     "stats_compete": "",
     "stats_chartbeat": "",
     "stats_custom": "",

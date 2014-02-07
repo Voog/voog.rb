@@ -1,0 +1,26 @@
+{
+  "id": 1,
+  "spam": false,
+  "created_at": "2014-02-07T15:08:49.000Z",
+  "updated_at": "2014-02-07T15:08:49.000Z",
+  "url": "http://edicy.test/admin/api/forms/1/tickets/1",
+  "form": {
+    "id": 1,
+    "title": "Form page",
+    "created_at": "2014-02-07T11:22:01.000Z",
+    "updated_at": "2014-02-07T13:06:19.000Z",
+    "url": "http://edicy.test/admin/api/forms/1"
+  },
+  "user_ip": "23.81.71.154",
+  "user_country": "us",
+  "user_city": "Phoenix",
+  "user_language": "en-US",
+  "user_latitude": "33.6748",
+  "user_longitude": "-111.9519",
+  "data": {
+    "field_1386926728322": "test@example.cpm",
+    "field_1386926764566": "Choice 3",
+    "field_1386926768551": "Text\nArea",
+    "field_1391778363674": "report.pdf"
+  }
+}

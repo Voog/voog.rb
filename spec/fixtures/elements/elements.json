@@ -7,15 +7,15 @@
     "path": "bill-gates",
     "title": "Bill Gates",
     "path_with_page": "people/bill-gates",
-    "url": "http://helloworld.edicy.co/admin/api/elements/2",
-    "move_url": "http://helloworld.edicy.co/admin/api/elements/2/move",
-    "public_url": "http://helloworld.edicy.co/people/bill-gates",
+    "url": "http://edicy.test/admin/api/elements/2",
+    "move_url": "http://edicy.test/admin/api/elements/2/move",
+    "public_url": "http://edicy.test/people/bill-gates",
     "element_definition": {
       "id": 1,
       "title": "Person",
       "created_at": "24-02-05T11:22:47.000Z",
       "updated_at": "24-02-05T11:22:47.000Z",
-      "url": "http://helloworld.edicy.co/admin/api/element_definitions/1"
+      "url": "http://edicy.test/admin/api/element_definitions/1"
     },
     "page": {
       "id": 2,
@@ -24,7 +24,7 @@
       "updated_at": "24-02-05T11:26:42.000Z",
       "content_type": "elements",
       "published_at": "24-02-05T11:26:19.000Z",
-      "url": "http://helloworld.edicy.co/admin/api/pages/2"
+      "url": "http://edicy.test/admin/api/pages/2"
     }
   }, {
     "id": 1,
@@ -34,15 +34,15 @@
     "path": "marilyn-monroe",
     "title": "Marilyn Monroe",
     "path_with_page": "people/marilyn-monroe",
-    "url": "http://helloworld.edicy.co/admin/api/elements/1",
-    "move_url": "http://helloworld.edicy.co/admin/api/elements/1/move",
-    "public_url": "http://helloworld.edicy.co/people/marilyn-monroe",
+    "url": "http://edicy.test/admin/api/elements/1",
+    "move_url": "http://edicy.test/admin/api/elements/1/move",
+    "public_url": "http://edicy.test/people/marilyn-monroe",
     "element_definition": {
       "id": 1,
       "title": "Person",
       "created_at": "24-02-05T11:22:47.000Z",
       "updated_at": "24-02-05T11:22:47.000Z",
-      "url": "http://helloworld.edicy.co/admin/api/element_definitions/1"
+      "url": "http://edicy.test/admin/api/element_definitions/1"
     },
     "page": {
       "id": 2,
@@ -51,7 +51,7 @@
       "updated_at": "24-02-05T11:26:42.000Z",
       "content_type": "elements",
       "published_at": "24-02-05T11:26:19.000Z",
-      "url": "http://helloworld.edicy.co/admin/api/pages/2"
+      "url": "http://edicy.test/admin/api/pages/2"
     }
   }
 ]

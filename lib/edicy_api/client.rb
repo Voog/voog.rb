@@ -17,6 +17,7 @@ require 'edicy_api/api/pages'
 require 'edicy_api/api/people'
 require 'edicy_api/api/tags'
 require 'edicy_api/api/texts'
+require 'edicy_api/api/tickets'
 
 module Edicy
   
@@ -39,6 +40,7 @@ module Edicy
     include Edicy::API::Site
     include Edicy::API::Tags
     include Edicy::API::Texts
+    include Edicy::API::Tickets
 
     attr_reader :api_token, :host
 
