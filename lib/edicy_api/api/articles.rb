@@ -22,6 +22,11 @@ module Edicy
         put "articles/#{id}", data
       end
 
+      # Patch a article
+      def patch_article(id, data)
+        patch "articles/#{id}", data
+      end
+
       # Delete a article
       def delete_article(id)
         delete "articles/#{id}"

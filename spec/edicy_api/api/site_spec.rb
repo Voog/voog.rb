@@ -29,6 +29,17 @@ describe Edicy::API::Site do
     end
   end
 
+  describe '#patch_site' do
+
+    before do
+      request_fixture(:patch, 'site', request: {body: {meta_keywords: 'new keys'}}, response: {body: '{"meta_keywords": "new keys"}'})
+    end
+
+    it 'responds with updated meta_keywords' do
+      expect(client.patch_site(meta_keywords: 'new keys').meta_keywords).to eq('new keys')
+    end
+  end
+
   describe '#update_site_data' do
 
     before do

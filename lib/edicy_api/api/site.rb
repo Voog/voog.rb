@@ -12,6 +12,11 @@ module Edicy
         put "site", data
       end
 
+      # Patch a site
+      def patch_site(data)
+        patch "site", data
+      end
+
       # Update/create a key in site data field
       #
       # @params id [String] key in data field

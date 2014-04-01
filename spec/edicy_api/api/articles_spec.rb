@@ -51,6 +51,17 @@ describe Edicy::API::Articles do
     end
   end
 
+  describe '#patch_article' do
+
+    before do
+      request_fixture(:patch, 'articles/2', request: {body: {title: 'New release!'}}, response: {body: '{"id": 2, "title": "New release!"}'})
+    end
+
+    it 'responds with new title' do
+      expect(client.patch_article(2, title: 'New release!').title).to eq('New release!')
+    end
+  end
+
   describe '#update_article_data' do
 
     before do

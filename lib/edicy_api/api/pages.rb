@@ -22,6 +22,11 @@ module Edicy
         put "pages/#{id}", data
       end
 
+      # Patch a page
+      def patch_page(id, data)
+        patch "pages/#{id}", data
+      end
+
       # Delete a page
       def delete_page(id)
         delete "pages/#{id}"

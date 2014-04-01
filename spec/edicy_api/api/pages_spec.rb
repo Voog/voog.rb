@@ -51,6 +51,17 @@ describe Edicy::API::Pages do
     end
   end
 
+  describe '#patch_page' do
+
+    before do
+      request_fixture(:patch, 'pages/2', request: {body: {title: 'Updated title'}}, response: {body: '{"id": 2, "title": "Updated title"}'})
+    end
+
+    it 'responds with new title' do
+      expect(client.patch_page(2, title: 'Updated title').title).to eq('Updated title')
+    end
+  end
+
   describe '#update_page_data' do
 
     before do
