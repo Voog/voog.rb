@@ -23,5 +23,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'webmock', '1.16.0'
   spec.add_development_dependency 'rake'
   
-  spec.add_dependency 'sawyer', '~> 0.5.2'
+  spec.add_dependency 'sawyer', '~> 0.5.4'
 end
