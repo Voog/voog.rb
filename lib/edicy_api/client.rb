@@ -81,6 +81,8 @@ module Edicy
     
     def agent
       @agent ||= Sawyer::Agent.new(api_endpoint, sawyer_options) do |http|
+        http.headers[:content_type] = 'application/json'
+        http.headers[:accept] = 'application/json'
         http.headers[:user_agent] = 'Edicy.rb Ruby wrapper'
         http.headers[:x_api_token] = @api_token
       end
