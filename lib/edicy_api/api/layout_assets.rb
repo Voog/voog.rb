@@ -14,7 +14,12 @@ module Edicy
 
       # Create a layout asset
       def create_layout_asset(data)
-        post 'layout_assets', data
+        if data.key?(:file)
+          data[:file] = Faraday::UploadIO.new(data[:file], data[:content_type])
+          options = {multipart: true}
+        end
+
+        post 'layout_assets', {layout_asset: data}, (options || {})
       end
 
       # Update a layout asset

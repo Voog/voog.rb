@@ -1,3 +1,4 @@
+require 'json'
 require 'sawyer'
 
 require 'edicy_api/api/articles'
@@ -80,30 +81,49 @@ module Edicy
     
     def agent
       @agent ||= Sawyer::Agent.new(api_endpoint, sawyer_options) do |http|
-        http.headers[:accept] = 'application/json'
-        http.headers[:content_type] = 'application/json'
         http.headers[:user_agent] = 'Edicy.rb Ruby wrapper'
         http.headers[:x_api_token] = @api_token
+      end
+    end
+
+    def multipart_agent
+      Faraday.new do |faraday|
+        faraday.request :multipart
+        faraday.adapter :net_http
+
+        faraday.headers['X_API_TOKEN'] = @api_token
+        faraday.headers['User-Agent'] = 'Edicy.rb Ruby wrapper'
       end
     end
     
     def last_response
       @last_response
     end
+
+    def parse_response(response)
+      JSON.parse(response).inject({}){|memo,(k,v)| memo[k.to_sym] = v; memo}
+    end
     
     private
     
     def request(method, path, data, options = {})
-      @last_response = response = agent.call(method, URI.encode(path.to_s), data, options)
-      response.data
-    end
-    
-    def sawyer_options
-      opts = {
-        faraday: Faraday.new,
-        links_parser: Sawyer::LinkParsers::Simple.new
-      }
+      multipart = options.fetch(:multipart, false) && (method == :post)
 
+      @last_response = response = multipart ? \
+        multipart_agent.post("#{api_endpoint}/#{path}", data) : \
+        agent.call(method, URI.encode(path.to_s), data, options)
+      if multipart
+        parse_response(response.body)
+      else
+        response.data
+      end
+    end
+
+    def sawyer_options(multipart = false)
+      opts = {
+        links_parser: Sawyer::LinkParsers::Simple.new,
+        faraday: Faraday.new
+      }
       opts
     end
   end
