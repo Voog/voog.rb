@@ -19,7 +19,7 @@ module Edicy
           options = {multipart: true}
         end
 
-        post 'layout_assets', data, (options || {})
+        post 'layout_assets', {layout_asset: data}, (options || {})
       end
 
       # Update a layout asset
