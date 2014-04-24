@@ -34,7 +34,7 @@ module Edicy
 
       # Enable language automatic detection for site visitors
       def enable_language_autodetect
-        put "languages/enable_autodetect", nil, nil
+        put "languages/enable_autodetect", nil
       end
 
       # Language contents
