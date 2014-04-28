@@ -49,6 +49,7 @@ module Edicy
       @host = host
       @api_token = api_token
       @options = options
+      @raise_on_error = options.fetch(:raise_on_error, true)
     end
 
     def get(url, options = {})
@@ -91,6 +92,7 @@ module Edicy
     def multipart_agent
       Faraday.new do |faraday|
         faraday.request :multipart
+        faraday.response :raise_error if @raise_on_error
         faraday.adapter :net_http
 
         faraday.headers['X_API_TOKEN'] = @api_token
@@ -122,9 +124,13 @@ module Edicy
     end
 
     def sawyer_options(multipart = false)
+      faraday = Faraday.new do |faraday|
+        faraday.response :raise_error if @raise_on_error
+        faraday.adapter :net_http
+      end
       opts = {
         links_parser: Sawyer::LinkParsers::Simple.new,
-        faraday: Faraday.new
+        faraday: faraday
       }
       opts
     end
