@@ -12,6 +12,11 @@ module Edicy
         get "articles/#{article_id}/comments/#{id}", {query: params}
       end
 
+      # Create a comment
+      def create_comment(article_id, data)
+        post "articles/#{article_id}/comments", data
+      end
+
       # Toggle comment spam flag
       def toggle_spam_comment(article_id, id)
         put "articles/#{article_id}/comments/#{id}/toggle_spam", nil
