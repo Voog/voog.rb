@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "content_type": "custom",
+    "created_at": "2014-05-30T09:25:22.000Z",
+    "updated_at": "2014-05-30T09:26:17.000Z",
+    "url": "http://edicy.test/admin/api/content_partials/1",
+    "content": {
+      "id": 1,
+      "name": "body",
+      "created_at": "2014-05-30T09:25:22.000Z",
+      "updated_at": "2014-05-30T09:25:22.000Z",
+      "position": 1,
+      "url": "http://edicy.test/admin/api/pages/1/contents/1"
+    },
+    "parent": {
+      "id": 1,
+      "title": "Home page",
+      "created_at": "2014-05-30T09:22:49.000Z",
+      "updated_at": "2014-05-30T09:22:54.000Z",
+      "type": "page",
+      "url": "http://edicy.test/admin/api/pages/1"
+    }
+  }, {
+    "id": 2,
+    "content_type": "video",
+    "created_at": "2014-05-30T11:43:42.000Z",
+    "updated_at": "2014-05-30T11:44:07.000Z",
+    "url": "http://edicy.test/admin/api/content_partials/2",
+    "content": {
+      "id": 2,
+      "name": "body",
+      "created_at": "2014-05-30T11:43:42.000Z",
+      "updated_at": "2014-05-30T11:43:42.000Z",
+      "position": 2,
+      "url": "http://edicy.test/admin/api/pages/3/contents/2"
+    },
+    "parent": {
+      "id": 3,
+      "title": "Contact",
+      "created_at": "2014-05-30T11:43:37.000Z",
+      "updated_at": "2014-05-30T11:43:37.000Z",
+      "type": "page",
+      "url": "http://edicy.test/admin/api/pages/3"
+    }
+  }
+]
