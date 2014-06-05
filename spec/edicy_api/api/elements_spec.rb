@@ -61,4 +61,18 @@ describe Edicy::API::Elements do
       expect(client.move_element(1, page_id: 2).page.id).to eq(2)
     end
   end
+
+  describe '#element_content' do
+    before do
+      request_fixture(:get, 'elements/1/contents/2', fixture: 'contents/content')
+    end
+
+    it 'returns a single content' do
+      expect(client.content(Edicy::API::Contents::ParentKind::Element, 1, 2).name).to eq('slogan')
+    end
+
+    it 'returns a content with the same id as in the request' do
+      expect(client.content(Edicy::API::Contents::ParentKind::Element, 1, 2).id).to eq(2)
+    end
+  end
 end

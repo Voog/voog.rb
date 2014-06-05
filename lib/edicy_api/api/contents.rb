@@ -4,6 +4,7 @@ module Edicy
 
       module ParentKind
         Article = 'articles'
+        Element = 'elements'
         Language = 'languages'
         Page = 'pages'
       end
