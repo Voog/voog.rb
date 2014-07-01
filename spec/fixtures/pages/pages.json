@@ -15,24 +15,24 @@
     "created_at": "2013-12-13T09:19:04.000Z",
     "updated_at": "2013-12-13T09:19:04.000Z",
     "published_at": "2013-12-13T09:19:04.000Z",
-    "url": "http://edicy.test/admin/api/pages/1",
-    "public_url": "http://edicy.test/",
-    "contents_url": "http://edicy.test/admin/api/pages/1/contents",
-    "children_url": "http://edicy.test/admin/api/pages?parent_id=1",
+    "url": "http://voog.test/admin/api/pages/1",
+    "public_url": "http://voog.test/",
+    "contents_url": "http://voog.test/admin/api/pages/1/contents",
+    "children_url": "http://voog.test/admin/api/pages?parent_id=1",
     "language": {
       "id": 1,
       "code": "en",
       "title": "ENG",
       "created_at": "2013-04-05T13:53:00.000Z",
       "updated_at": "2013-04-11T10:08:54.000Z",
-      "url": "http://edicy.test/admin/api/languages/1"
+      "url": "http://voog.test/admin/api/languages/1"
     },
     "layout": {
       "id": 1,
       "title": "Front page",
       "layout_name": "page_front",
       "content_type": "page",
-      "url": "http://edicy.test/admin/api/layouts/1",
+      "url": "http://voog.test/admin/api/layouts/1",
       "created_at": "2013-04-05T13:53:00.000Z",
       "updated_at": "2013-04-11T10:08:54.000Z",
       "mime_type": "application/vnd.voog.design.custom+liquid"
@@ -44,8 +44,8 @@
       "position": 1,
       "created_at": "2013-12-13T09:19:04.000Z",
       "updated_at": "2013-12-13T09:19:04.000Z",
-      "url": "http://edicy.test/admin/api/nodes/1",
-      "children_url": "http://edicy.test/admin/api/nodes?parent_id=1",
+      "url": "http://voog.test/admin/api/nodes/1",
+      "children_url": "http://voog.test/admin/api/nodes?parent_id=1",
       "parent_url": null
     }
   }, {
@@ -67,24 +67,24 @@
     "created_at": "2013-12-13T09:19:04.000Z",
     "updated_at": "2014-01-03T12:14:34.000Z",
     "published_at": "2013-12-13T09:19:04.000Z",
-    "url": "http://edicy.test/admin/api/pages/2",
-    "public_url": "http://edicy.test/products",
-    "contents_url": "http://edicy.test/admin/api/pages/2/contents",
-    "children_url": "http://edicy.test/admin/api/pages?parent_id=2",
+    "url": "http://voog.test/admin/api/pages/2",
+    "public_url": "http://voog.test/products",
+    "contents_url": "http://voog.test/admin/api/pages/2/contents",
+    "children_url": "http://voog.test/admin/api/pages?parent_id=2",
     "language": {
       "id": 1,
       "code": "en",
       "title": "ENG",
       "created_at": "2013-04-05T13:54:32.000Z",
       "updated_at": "2013-04-11T10:09:51.000Z",
-      "url": "http://edicy.test/admin/api/languages/1"
+      "url": "http://voog.test/admin/api/languages/1"
     },
     "layout": {
       "id": 2,
       "title": "Common page",
       "layout_name": "page_default",
       "content_type": "page",
-      "url": "http://edicy.test/admin/api/layouts/2",
+      "url": "http://voog.test/admin/api/layouts/2",
       "created_at": "2013-04-05T13:54:32.000Z",
       "updated_at": "2013-04-11T10:09:51.000Z",
       "mime_type": "application/vnd.voog.design.custom+liquid"
@@ -96,9 +96,9 @@
       "position": 2,
       "created_at": "2013-12-13T09:19:04.000Z",
       "updated_at": "2014-01-03T12:14:34.000Z",
-      "url": "http://edicy.test/admin/api/nodes/2",
-      "children_url": "http://edicy.test/admin/api/nodes?parent_id=2",
-      "parent_url": "http://edicy.test/admin/api/nodes/1"
+      "url": "http://voog.test/admin/api/nodes/2",
+      "children_url": "http://voog.test/admin/api/nodes?parent_id=2",
+      "parent_url": "http://voog.test/admin/api/nodes/1"
     }
   }
 ]

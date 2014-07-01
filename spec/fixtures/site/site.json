@@ -7,7 +7,7 @@
     "my_key_1": "Value 1",
     "my_key_2": 2
   },
-  "public_url": "http://edicy.test/",
+  "public_url": "http://voog.test/",
   "data_usage": 332682,
   "subscription": {
     "subscription_plan": "plus",
@@ -19,12 +19,12 @@
   },
   "stats": {
     "webtools_verify_key": "googlef52f1d814b8972e9.html",
-    "stats_google_analytics": "<script type=\"text/javascript\">\n\n var _gaq = _gaq || [];\n _gaq.push(['_setAccount', 'UA-XXXXXXX-X']);\n _gaq.push(['_setDomainName', 'edicy.test']);\n</script>",
+    "stats_google_analytics": "<script type=\"text/javascript\">\n\n var _gaq = _gaq || [];\n _gaq.push(['_setAccount', 'UA-XXXXXXX-X']);\n _gaq.push(['_setDomainName', 'voog.test']);\n</script>",
     "stats_compete": "",
     "stats_chartbeat": "",
     "stats_custom": "",
-    "stats_edicy_code": "<script type=\"text/javascript\">\nvar _ews = _ews || {_account: 'A-36-1', _tzo: '7200'};</script>",
-    "stats_edicy_timezone": "Tallinn",
-    "stats_edicy_utc_offset": 7200
+    "stats_voog_code": "<script type=\"text/javascript\">\nvar _ews = _ews || {_account: 'A-36-1', _tzo: '7200'};</script>",
+    "stats_voog_timezone": "Tallinn",
+    "stats_voog_utc_offset": 7200
   }
 }

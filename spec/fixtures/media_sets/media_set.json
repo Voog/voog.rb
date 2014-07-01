@@ -3,8 +3,8 @@
   "title": "Standalone media set",
   "created_at": "2014-01-16T08:16:33.000Z",
   "updated_at": "2014-01-16T08:16:33.000Z",
-  "url": "http://edicy.test/admin/api/media_sets/2",
-  "add_assets_url": "http://edicy.test/admin/api/media_sets/2/add_assets",
+  "url": "http://voog.test/admin/api/media_sets/2",
+  "add_assets_url": "http://voog.test/admin/api/media_sets/2/add_assets",
   "assets": [{
     "title": "",
     "position": 1,
@@ -13,10 +13,10 @@
     "id": 1,
     "extension": "png",
     "type": "image",
-    "url": "http://edicy.test/admin/api/assets/1",
-    "original_url": "http://media.edicy.com/0000/0000/0001/photos/account-currency.png",
-    "thumbnail_url": "http://media.edicy.com/0000/0000/0001/photos/account-currency_large.png",
-    "medium_thumbnail_url": "http://media.edicy.com/0000/0000/0001/photos/account-currency_medium.png",
+    "url": "http://voog.test/admin/api/assets/1",
+    "original_url": "http://media.voog.com/0000/0000/0001/photos/account-currency.png",
+    "thumbnail_url": "http://media.voog.com/0000/0000/0001/photos/account-currency_large.png",
+    "medium_thumbnail_url": "http://media.voog.com/0000/0000/0001/photos/account-currency_medium.png",
     "width": 634,
     "height": 295
   }]

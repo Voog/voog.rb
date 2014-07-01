@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'edicy_api/version'
+require 'voog_api/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'edicy_api'
-  spec.version       = Edicy::VERSION
+  spec.name          = 'voog_api'
+  spec.version       = Voog::VERSION
   spec.authors       = ['Priit Haamer', 'Mikk Pristavka', 'Tanel Jakobsoo']
   spec.email         = ['priit@edicy.com', 'mikk@fraktal.ee', 'tanel@fraktal.ee']
   spec.description   = %q{Best API wrapper for the best website builder}
-  spec.summary       = %q{Ruby toolkit for the Edicy API}
-  spec.homepage      = 'https://github.com/Edicy/edicy.rb'
+  spec.summary       = %q{Ruby toolkit for the Voog API}
+  spec.homepage      = 'https://github.com/Edicy/voog.rb'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files`.split($/)

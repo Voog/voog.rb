@@ -2,21 +2,21 @@
   "id": 2,
   "created_at": "2014-01-14T10:22:04.000Z",
   "updated_at": "2014-01-14T10:22:04.000Z",
-  "url": "http://edicy.test/admin/api/texts/2",
+  "url": "http://voog.test/admin/api/texts/2",
   "content": {
     "id": 3,
     "name": "body",
     "position": 1,
     "created_at": "2014-01-14T10:22:04.000Z",
     "updated_at": "2014-01-14T10:22:04.000Z",
-    "url": "http://edicy.test/admin/api/pages/1/contents/3"
+    "url": "http://voog.test/admin/api/pages/1/contents/3"
   },
   "parent": {
     "id": 1,
     "type": "page",
     "created_at": "2014-01-13T09:19:04.000Z",
     "updated_at": "2014-01-13T09:19:04.000Z",
-    "url": "http://edicy.test/admin/api/pages/1"
+    "url": "http://voog.test/admin/api/pages/1"
   },
   "body": "<h3>A better way to create a website</h3>",
   "autosaved_body": "<h3>A better way to create a website (not published)</h3>"

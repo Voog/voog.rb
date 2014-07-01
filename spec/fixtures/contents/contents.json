@@ -6,28 +6,28 @@
     "content_type": "form",
     "created_at": "2014-01-13T09:19:05.000Z",
     "updated_at": "2014-01-13T09:19:05.000Z",
-    "url": "http://edicy.test/admin/api/pages/1/contents/1",
-    "relocate_url": "http://edicy.test/admin/api/pages/1/contents/1/relocate",
+    "url": "http://voog.test/admin/api/pages/1/contents/1",
+    "relocate_url": "http://voog.test/admin/api/pages/1/contents/1/relocate",
     "language": {
       "id": 1,
       "code": "en",
       "title": "ENG",
       "created_at": "2014-01-13T09:19:04.000Z",
       "updated_at": "2014-01-13T09:19:04.000Z",
-      "url": "http://edicy.test/admin/api/languages/1"
+      "url": "http://voog.test/admin/api/languages/1"
     },
     "parent": {
       "id": 1,
       "type": "page",
       "created_at": "2014-01-13T09:19:04.000Z",
       "updated_at": "2014-01-13T09:19:04.000Z",
-      "url": "http://edicy.test/admin/api/pages/1"
+      "url": "http://voog.test/admin/api/pages/1"
     },
     "form": {
       "id": 1,
       "created_at": "2014-01-13T09:25:22.000Z",
       "updated_at": "2014-01-13T09:26:17.000Z",
-      "url": "http://edicy.test/admin/api/forms/1"
+      "url": "http://voog.test/admin/api/forms/1"
     }
   }, {
     "id": 2,
@@ -36,28 +36,28 @@
     "content_type": "text",
     "created_at": "2014-01-13T09:19:05.000Z",
     "updated_at": "2014-01-13T09:19:05.000Z",
-    "url": "http://edicy.test/admin/api/pages/1/contents/2",
-    "relocate_url": "http://edicy.test/admin/api/pages/1/contents/2/relocate",
+    "url": "http://voog.test/admin/api/pages/1/contents/2",
+    "relocate_url": "http://voog.test/admin/api/pages/1/contents/2/relocate",
     "language": {
       "id": 1,
       "code": "en",
       "title": "ENG",
       "created_at": "2014-01-13T09:19:04.000Z",
       "updated_at": "2014-01-13T09:19:04.000Z",
-      "url": "http://edicy.test/admin/api/languages/1"
+      "url": "http://voog.test/admin/api/languages/1"
     },
     "parent": {
       "id": 1,
       "type": "page",
       "created_at": "2014-01-13T09:19:04.000Z",
       "updated_at": "2014-01-13T09:19:04.000Z",
-      "url": "http://edicy.test/admin/api/pages/1"
+      "url": "http://voog.test/admin/api/pages/1"
     },
     "text": {
       "id": 1,
       "created_at": "2014-01-13T09:19:04.000Z",
       "updated_at": "2014-01-13T09:19:04.000Z",
-      "url": "http://edicy.test/admin/api/texts/1"
+      "url": "http://voog.test/admin/api/texts/1"
     }
   }
 ]

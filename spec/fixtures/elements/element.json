@@ -6,15 +6,15 @@
   "path": "marilyn-monroe",
   "title": "Marilyn Monroe",
   "path_with_page": "people/marilyn-monroe",
-  "url": "http://edicy.test/admin/api/elements/1",
-  "move_url": "http://edicy.test/admin/api/elements/1/move",
-  "public_url": "http://edicy.test/people/marilyn-monroe",
+  "url": "http://voog.test/admin/api/elements/1",
+  "move_url": "http://voog.test/admin/api/elements/1/move",
+  "public_url": "http://voog.test/people/marilyn-monroe",
   "element_definition": {
     "id": 1,
     "title": "Person",
     "created_at": "24-02-05T11:22:47.000Z",
     "updated_at": "24-02-05T11:22:47.000Z",
-    "url": "http://edicy.test/admin/api/element_definitions/1"
+    "url": "http://voog.test/admin/api/element_definitions/1"
   },
   "page": {
     "id": 2,
@@ -23,7 +23,7 @@
     "updated_at": "24-02-05T11:26:42.000Z",
     "content_type": "elements",
     "published_at": "24-02-05T11:26:19.000Z",
-    "url": "http://edicy.test/admin/api/pages/2"
+    "url": "http://voog.test/admin/api/pages/2"
   },
   "values": {
     "description": "Marilyn Monroe was an American actress, model, and singer.",

@@ -4,28 +4,28 @@
     "name": "art",
     "created_at": "2014-01-31T13:43:36.000Z",
     "updated_at": "2014-01-31T13:43:36.000Z",
-    "url": "http://edicy.test/admin/api/tags/2",
+    "url": "http://voog.test/admin/api/tags/2",
     "language": {
       "id": 40,
       "code": "en",
       "title": "ENG",
       "created_at": "2014-01-22T09:19:04.000Z",
       "updated_at": "2014-01-22T09:19:04.000Z",
-      "url": "http://edicy.test/admin/api/languages/40"
+      "url": "http://voog.test/admin/api/languages/40"
     }
   }, {
     "id": 1,
     "name": "fun",
     "created_at": "2014-01-31T13:43:36.000Z",
     "updated_at": "2014-01-31T13:43:36.000Z",
-    "url": "http://edicy.test/admin/api/tags/1",
+    "url": "http://voog.test/admin/api/tags/1",
     "language": {
       "id": 1,
       "code": "en",
       "title": "ENG",
       "created_at": "2014-01-22T09:19:04.000Z",
       "updated_at": "2014-01-22T09:19:04.000Z",
-      "url": "http://edicy.test/admin/api/languages/40"
+      "url": "http://voog.test/admin/api/languages/40"
     }
   }
 ]

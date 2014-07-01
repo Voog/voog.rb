@@ -3,21 +3,21 @@
   "title": "Contact",
   "created_at": "2014-01-14T11:43:42.000Z",
   "updated_at": "2014-01-14T11:44:07.000Z",
-  "url": "http://edicy.test/admin/api/forms/2",
+  "url": "http://voog.test/admin/api/forms/2",
   "content": {
     "id": 2,
     "name": "body",
     "position": 2,
     "created_at": "2014-01-14T11:43:42.000Z",
     "updated_at": "2014-01-14T11:43:42.000Z",
-    "url": "http://edicy.test/admin/api/pages/3/contents/2"
+    "url": "http://voog.test/admin/api/pages/3/contents/2"
   },
   "parent": {
     "id": 3,
     "type": "page",
     "created_at": "2014-01-14T11:43:37.000Z",
     "updated_at": "2014-01-14T11:43:37.000Z",
-    "url": "http://edicy.test/admin/api/pages/3"
+    "url": "http://voog.test/admin/api/pages/3"
   },
   "description": null,
   "fields": [{

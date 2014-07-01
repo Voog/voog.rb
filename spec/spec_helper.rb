@@ -1,4 +1,4 @@
-require 'edicy_api'
+require 'voog_api'
 require 'webmock/rspec'
 
 WebMock.disable_net_connect!
@@ -17,12 +17,12 @@ RSpec.configure do |config|
   config.order = 'random'
 end
 
-def edicy_client
-  Edicy.configure do |config|
-    config.host = 'edicy.test'
+def voog_client
+  Voog.configure do |config|
+    config.host = 'voog.test'
     config.api_token = 'afcf30182aecfc8155d390d7d4552d14'
   end
-  Edicy.client
+  Voog.client
 end
 
 def fixture(file)
@@ -38,9 +38,9 @@ def request_fixture(method, path, options = {})
     response[:body] = fixture(options[:fixture]) if options.has_key?(:fixture)
   }.merge(options.fetch(:response, {}))
   
-  stub_request(method, edicy_url(path)).with(request).to_return(response)
+  stub_request(method, voog_url(path)).with(request).to_return(response)
 end
 
-def edicy_url(path)
-  "http://edicy.test/admin/api/#{path}"
+def voog_url(path)
+  "http://voog.test/admin/api/#{path}"
 end

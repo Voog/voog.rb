@@ -7,8 +7,8 @@
   "width": null,
   "height": null,
   "editable": true,
-  "url": "http://edicy.test/admin/api/layout_assets/2",
-  "public_url": "http://edicy.test/stylesheets/style.css",
+  "url": "http://voog.test/admin/api/layout_assets/2",
+  "public_url": "http://voog.test/stylesheets/style.css",
   "created_at": "2014-01-01T15:28:24.000Z",
   "updated_at": "2014-01-01T15:28:24.000Z"
 }
