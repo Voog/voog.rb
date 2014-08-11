@@ -1,5 +1,7 @@
 # voog.rb
 
+[ ![Codeship Status for Edicy/voog.rb](https://www.codeship.io/projects/785ef4c0-0388-0132-4cf0-0e105ab6f59d/status)](https://www.codeship.io/projects/30460)
+
 Ruby toolkit for the [Voog](http://www.voog.com) API.
 
 Learn more at the [Voog developer central](http://www.voog.com/developers/api) and by reading the [Voog API documentation](http://www.voog.com/developers/api).
