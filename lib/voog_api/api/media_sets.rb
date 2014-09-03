@@ -29,7 +29,7 @@ module Voog
 
       # Add assets to media_set
       def media_set_add_assets(media_set_id, data)
-        put "media_sets/#{media_set_id}/add_assets", data
+        post "media_sets/#{media_set_id}/add_assets", data
       end
     end
   end

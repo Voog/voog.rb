@@ -54,7 +54,7 @@ describe Voog::API::MediaSets do
   describe '#media_set_add_assets' do
 
     before do
-      request_fixture(:put, 'media_sets/2/add_assets', request: {body: {asset_ids: [5, 8]}}, response: {body: '{"id": 2, "assets": [{"id": 1}, {"id": 5}, {"id": 8}]}'})
+      request_fixture(:post, 'media_sets/2/add_assets', request: {body: {asset_ids: [5, 8]}}, response: {body: '{"id": 2, "assets": [{"id": 1}, {"id": 5}, {"id": 8}]}'})
     end
 
     it 'responds with correct assets set' do
