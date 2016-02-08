@@ -19,14 +19,14 @@ module Voog
 
       # Update/create a key in site data field
       #
-      # @params id [String] key in data field
+      # @param id [String] key in data field
       def update_site_data(id, data)
         put "site/data/#{id}", {value: data}
       end
 
       # Delete a key from site data field
       #
-      # @params id [String] key in data field
+      # @param id [String] key in data field
       def delete_site_data(id)
         delete "site/data/#{id}"
       end

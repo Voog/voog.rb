@@ -34,14 +34,14 @@ module Voog
 
       # Update/create a key in page data field
       #
-      # @params id [String] key in data field
+      # @param id [String] key in data field
       def update_page_data(page_id, id, data)
         put "pages/#{page_id}/data/#{id}", {value: data}
       end
 
       # Delete a key from page data field
       #
-      # @params id [String] key in data field
+      # @param id [String] key in data field
       def delete_page_data(page_id, id)
         delete "pages/#{page_id}/data/#{id}"
       end

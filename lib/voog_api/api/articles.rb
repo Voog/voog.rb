@@ -34,14 +34,14 @@ module Voog
 
       # Update/create a key in article data field
       #
-      # @params id [String] key in data field
+      # @param id [String] key in data field
       def update_article_data(article_id, id, data)
         put "articles/#{article_id}/data/#{id}", {value: data}
       end
 
       # Delete a key from article data field
       #
-      # @params id [String] key in data field
+      # @param id [String] key in data field
       def delete_article_data(article_id, id)
         delete "articles/#{article_id}/data/#{id}"
       end
