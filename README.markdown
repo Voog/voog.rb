@@ -35,7 +35,7 @@ To generate your personal **API token** for your site, go to `Account` -> `My pr
 All requests to the Voog API are done through the `Voog::Client` class, which takes two parameters: site host and API token.
 
 ```ruby
-client = Voog::Client.new('example.com', 'afcf30182aecfc8155d390d7d4552d14')
+client = Voog::Client.new('example.com', 'afcf30182aecfc8155d390d7d4552d14', protocol: :http, raise_on_error: false)
 ```
 
 Making an API request is as simple as calling a single method on the client:
@@ -55,3 +55,8 @@ puts layout.title
 puts layout[:title]
 # => "Front page"
 ```
+
+### Optional parameters for client
+
+* `protocol` - endpoint protocol (`http` or `https` default is `http`).
+* `raise_on_error` - interrupts program with error (`Faraday::Error`) when request response code is between `400` and `600` (default is `false`).

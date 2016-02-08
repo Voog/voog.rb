@@ -47,10 +47,19 @@ module Voog
 
     attr_reader :api_token, :host
 
+    # Initialize Voog API client.
+    #
+    # @param host [String] a Voog site host.
+    # @param api_token [String] a Voog site API token.
+    # @option options [String] :protocol endpoint protocol ("http" or "https"). Defaults to "http".
+    # @option options [Boolean] :raise_on_error interrupts program with error ("Faraday::Error") when request response code is between "400" and "600" (default is "false").
+    # @example Initialize client
+    #   client = Voog::Client.new('example.com', 'afcf30182aecfc8155d390d7d4552d14', protocol: :http, raise_on_error: false)
     def initialize(host = Voog.host, api_token = Voog.api_token, options = {})
       @host = host
       @api_token = api_token
       @options = options
+      @protocol = options[:protocol].to_s.downcase == 'https' ? 'https' : 'http'
       @raise_on_error = options.fetch(:raise_on_error, true)
     end
 
@@ -79,7 +88,7 @@ module Voog
     end
     
     def api_endpoint
-      "http://#{host}/admin/api"
+      "#{@protocol}://#{host}/admin/api"
     end
     
     def agent
