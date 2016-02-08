@@ -4,7 +4,7 @@ module Voog
 
       # List tags
       def tags(params = {})
-        get 'tags', {query: params}
+        paginate 'tags', {query: params}
       end
 
       # Get a single tag

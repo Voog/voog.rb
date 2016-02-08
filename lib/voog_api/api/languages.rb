@@ -4,7 +4,7 @@ module Voog
 
       # List languages
       def languages(params = {})
-        get 'languages', {query: params}
+        paginate 'languages', {query: params}
       end
 
       # Get a single language

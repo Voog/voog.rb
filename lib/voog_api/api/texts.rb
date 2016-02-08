@@ -4,7 +4,7 @@ module Voog
 
       # List text contents
       def texts(params = {})
-        get 'texts', {query: params}
+        paginate 'texts', {query: params}
       end
 
       # Get a single text content

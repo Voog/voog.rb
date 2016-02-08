@@ -4,7 +4,7 @@ module Voog
 
       # List elements
       def elements(params = {})
-        get 'elements', {query: params}
+        paginate 'elements', {query: params}
       end
 
       # Get a single element

@@ -4,7 +4,7 @@ module Voog
 
       # List forms
       def forms(params = {})
-        get 'forms', {query: params}
+        paginate 'forms', {query: params}
       end
 
       # Get a single form

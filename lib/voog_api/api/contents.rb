@@ -11,7 +11,7 @@ module Voog
 
       # List contents
       def contents(parent_name, parent_id, params = {})
-        get "#{parent_name}/#{parent_id}/contents", {query: params}
+        paginate "#{parent_name}/#{parent_id}/contents", {query: params}
       end
 
       # Get a single content

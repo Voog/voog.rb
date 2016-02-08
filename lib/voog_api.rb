@@ -5,7 +5,7 @@ module Voog
 
   class << self
     
-    attr_accessor :host, :api_token
+    attr_accessor :host, :api_token, :auto_paginate, :per_page
 
     def client(options = {})
       unless host.nil? && api_token.nil?
