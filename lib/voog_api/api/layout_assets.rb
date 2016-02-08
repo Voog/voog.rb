@@ -4,7 +4,7 @@ module Voog
       
       # List layouts assets
       def layout_assets(params = {})
-        get 'layout_assets', {query: params}
+        paginate 'layout_assets', {query: params}
       end
 
       # Get a single layout asset

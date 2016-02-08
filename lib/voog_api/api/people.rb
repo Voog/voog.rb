@@ -4,7 +4,7 @@ module Voog
 
       # List people
       def people(params = {})
-        get 'people', {query: params}
+        paginate 'people', {query: params}
       end
 
       # Get a single person

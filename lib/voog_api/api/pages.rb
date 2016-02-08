@@ -4,7 +4,7 @@ module Voog
 
       # List pages
       def pages(params = {})
-        get 'pages', {query: params}
+        paginate 'pages', {query: params}
       end
 
       # Get a single page

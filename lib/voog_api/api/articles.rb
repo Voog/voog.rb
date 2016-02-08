@@ -4,7 +4,7 @@ module Voog
 
       # List articles
       def articles(params = {})
-        get 'articles', {query: params}
+        paginate 'articles', {query: params}
       end
 
       # Get a single article

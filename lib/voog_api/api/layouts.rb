@@ -4,7 +4,7 @@ module Voog
 
       # List layouts
       def layouts(params = {})
-        get 'layouts', {query: params}
+        paginate 'layouts', {query: params}
       end
 
       # Get a single layout

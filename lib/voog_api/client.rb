@@ -25,7 +25,9 @@ require 'voog_api/api/tickets'
 module Voog
   
   class Client
-    
+
+    MAX_PER_PAGE = 250
+
     include Voog::API::Articles
     include Voog::API::Assets
     include Voog::API::Comments
@@ -46,13 +48,15 @@ module Voog
     include Voog::API::Texts
     include Voog::API::Tickets
 
-    attr_reader :api_token, :host
+    attr_reader :api_token, :host, :auto_paginate, :per_page
 
     # Initialize Voog API client.
     #
     # @param host [String] a Voog site host.
     # @param api_token [String] a Voog site API token.
     # @option options [String] :protocol endpoint protocol ("http" or "https"). Defaults to "http".
+    # @option options [String] :auto_paginate enable auto pagination for list requests. Defaults to "false".
+    # @option options [String] :per_page set default "per_page" value for list requests. Defaults to "nil".
     # @option options [Boolean] :raise_on_error interrupts program with error ("Faraday::Error") when request response code is between "400" and "600" (default is "false").
     # @example Initialize client
     #   client = Voog::Client.new('example.com', 'afcf30182aecfc8155d390d7d4552d14', protocol: :http, raise_on_error: false)
@@ -61,6 +65,8 @@ module Voog
       @api_token = api_token
       @options = options
       @protocol = options[:protocol].to_s.downcase == 'https' ? 'https' : 'http'
+      @auto_paginate = options.fetch(:auto_paginate, Voog.auto_paginate)
+      @per_page = options.fetch(:per_page, Voog.per_page)
       @raise_on_error = options.fetch(:raise_on_error, true)
     end
 
@@ -120,7 +126,32 @@ module Voog
     def parse_response(response)
       JSON.parse(response).inject({}){|memo,(k,v)| memo[k.to_sym] = v; memo}
     end
-    
+
+    # Fetch all elements for requested API resource when {#auto_paginate} is turned on.
+    def paginate(url, options = {}, &block)
+      opts = options.dup
+      if @auto_paginate || @per_page
+        opts[:query][:per_page] ||= @per_page || (@auto_paginate ? MAX_PER_PAGE : nil)
+      end
+
+      data = request(:get, url, nil, opts)
+
+      if @auto_paginate
+        i = 0
+        while @last_response.rels[:next]
+          puts "Request: #{i += 1}"
+          @last_response = @last_response.rels[:next].get(headers: opts[:headers])
+          if block_given?
+            yield(data, @last_response)
+          else
+            data.concat(@last_response.data) if @last_response.data.is_a?(Array)
+          end
+        end
+      end
+
+      data
+     end
+
     private
     
     def request(method, path, data, options = {})

@@ -4,7 +4,7 @@ module Voog
 
       # List media_sets
       def media_sets(params = {})
-        get 'media_sets', {query: params}
+        paginate 'media_sets', {query: params}
       end
 
       # Get a single media_set

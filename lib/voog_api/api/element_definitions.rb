@@ -4,7 +4,7 @@ module Voog
 
       # List element_definitions
       def element_definitions(params = {})
-        get 'element_definitions', {query: params}
+        paginate 'element_definitions', {query: params}
       end
 
       # Get a single element_definition

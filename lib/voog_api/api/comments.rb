@@ -4,7 +4,7 @@ module Voog
 
       # List article comments
       def comments(article_id, params = {})
-        get "articles/#{article_id}/comments", {query: params}
+        paginate "articles/#{article_id}/comments", {query: params}
       end
 
       # Get a single comment for article

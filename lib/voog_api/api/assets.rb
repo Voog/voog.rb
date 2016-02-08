@@ -4,7 +4,7 @@ module Voog
 
       # List assets
       def assets(params = {})
-        get 'assets', {query: params}
+        paginate 'assets', {query: params}
       end
 
       # Get a single asset

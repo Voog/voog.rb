@@ -4,7 +4,7 @@ module Voog
 
       # List form tickets
       def tickets(form_id, params = {})
-        get "forms/#{form_id}/tickets", {query: params}
+        paginate "forms/#{form_id}/tickets", {query: params}
       end
 
       # Get a single ticket for form

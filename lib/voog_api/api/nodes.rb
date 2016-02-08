@@ -4,7 +4,7 @@ module Voog
 
       # List nodes
       def nodes(params = {})
-        get 'nodes', {query: params}
+        paginate 'nodes', {query: params}
       end
 
       # Get a single node

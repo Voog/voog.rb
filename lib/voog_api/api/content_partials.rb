@@ -4,7 +4,7 @@ module Voog
 
       # List content partials contents
       def content_partials(params = {})
-        get 'content_partials', {query: params}
+        paginate 'content_partials', {query: params}
       end
 
       # Get a single content partial content
