@@ -108,7 +108,7 @@ module Voog
     end
 
     def multipart_agent
-      Faraday.new do |faraday|
+      @multipart_agent ||= Faraday.new do |faraday|
         faraday.request :multipart
         faraday.use Voog::Middleware::FollowRedirects
         faraday.response :raise_error if @raise_on_error
@@ -159,7 +159,7 @@ module Voog
 
       @last_response = response = multipart ? \
         multipart_agent.post("#{api_endpoint}/#{path}", data) : \
-        agent.call(method, URI.encode(path.to_s), data, options)
+        agent.call(method, URI.encode(path.to_s), data, options.dup)
       if multipart
         parse_response(response.body)
       else
