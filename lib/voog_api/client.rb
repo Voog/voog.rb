@@ -1,6 +1,8 @@
 require 'json'
 require 'sawyer'
 
+require 'voog_api/error'
+
 require 'voog_api/api/articles'
 require 'voog_api/api/assets'
 require 'voog_api/api/comments'
@@ -158,6 +160,9 @@ module Voog
       @last_response = response = multipart ? \
         multipart_agent.post("#{api_endpoint}/#{path}", data) : \
         agent.call(method, URI.encode(path.to_s), data, options.dup)
+
+      raise Voog::MovedPermanently.new(response.headers['location']) if response.status == 301
+
       if multipart
         parse_response(response.body)
       else
