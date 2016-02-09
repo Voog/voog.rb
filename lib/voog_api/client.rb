@@ -1,7 +1,6 @@
 require 'json'
 require 'sawyer'
 
-require 'voog_api/middleware/follow_redirects'
 require 'voog_api/api/articles'
 require 'voog_api/api/assets'
 require 'voog_api/api/comments'
@@ -110,7 +109,6 @@ module Voog
     def multipart_agent
       @multipart_agent ||= Faraday.new do |faraday|
         faraday.request :multipart
-        faraday.use Voog::Middleware::FollowRedirects
         faraday.response :raise_error if @raise_on_error
         faraday.adapter :net_http
 
@@ -170,7 +168,6 @@ module Voog
     def sawyer_options(multipart = false)
       faraday = Faraday.new do |faraday|
         faraday.response :raise_error if @raise_on_error
-        faraday.use Voog::Middleware::FollowRedirects
         faraday.adapter :net_http
       end
       opts = {
