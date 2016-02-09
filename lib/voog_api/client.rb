@@ -114,8 +114,8 @@ module Voog
         faraday.response :raise_error if @raise_on_error
         faraday.adapter :net_http
 
-        faraday.headers['X_API_TOKEN'] = @api_token
-        faraday.headers['User-Agent'] = 'Voog.rb Ruby wrapper'
+        faraday.headers[:x_api_token] = @api_token
+        faraday.headers[:user_agent] = 'Voog.rb Ruby wrapper'
       end
     end
     
