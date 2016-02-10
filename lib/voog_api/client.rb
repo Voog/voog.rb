@@ -49,7 +49,7 @@ module Voog
     include Voog::API::Texts
     include Voog::API::Tickets
 
-    attr_reader :api_token, :host, :auto_paginate, :per_page
+    attr_reader :api_token, :host, :protocol, :auto_paginate, :per_page
 
     # Initialize Voog API client.
     #
@@ -96,7 +96,11 @@ module Voog
     end
     
     def api_endpoint
-      "#{@protocol}://#{host}/admin/api"
+      "#{host_with_protocol}/admin/api".freeze
+    end
+
+    def host_with_protocol
+      "#{protocol}://#{host}".freeze
     end
     
     def agent
@@ -137,9 +141,7 @@ module Voog
       data = request(:get, url, nil, opts)
 
       if @auto_paginate
-        i = 0
         while @last_response.rels[:next]
-          puts "Request: #{i += 1}"
           @last_response = @last_response.rels[:next].get(headers: opts[:headers])
           if block_given?
             yield(data, @last_response)
@@ -161,7 +163,7 @@ module Voog
         multipart_agent.post("#{api_endpoint}/#{path}", data) : \
         agent.call(method, URI.encode(path.to_s), data, options.dup)
 
-      raise Voog::MovedPermanently.new(response.headers['location']) if response.status == 301
+      raise Voog::MovedPermanently.new(response, host_with_protocol) if response.status == 301
 
       if multipart
         parse_response(response.body)
