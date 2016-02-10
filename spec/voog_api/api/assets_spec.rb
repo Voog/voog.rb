@@ -23,7 +23,7 @@ describe Voog::API::Assets do
       expect(client.asset(1).filename).to eq('Screen Shot 2014-01-28 at 10.53.26.png')
     end
 
-    it 'returns a asset with the same id as in the request' do
+    it 'returns an asset with the same id as in the request' do
       expect(client.asset(1).id).to eq(1)
     end
   end

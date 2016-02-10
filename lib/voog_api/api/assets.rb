@@ -20,21 +20,21 @@ module Voog
         get "assets/#{id}", {query: params}
       end
 
-      # Create a asset
+      # Create an asset
       #
       # @see http://www.voog.com/developers/api/resources/assets#create_asset
       def create_asset(data)
         post 'assets', data
       end
 
-      # Confirm a asset upload
+      # Confirm an asset upload
       #
       # @see http://www.voog.com/developers/api/resources/assets#confirm_asset
       def confirm_asset(id)
         put "assets/#{id}/confirm", nil
       end
 
-      # Delete a asset
+      # Delete an asset
       #
       # @see http://www.voog.com/developers/api/resources/assets#remove_asset
       def delete_asset(id)

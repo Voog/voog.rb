@@ -34,7 +34,7 @@ module Voog
         put "articles/#{article_id}/comments/#{id}/toggle_spam", nil
       end
 
-      # Delete a article comment
+      # Delete an article comment
       #
       # @see http://www.voog.com/developers/api/resources/comments#remove_comment
       def delete_comment(article_id, id)

@@ -23,7 +23,7 @@ describe Voog::API::Articles do
       expect(client.article(2).title).to eq('How I wrote my first article')
     end
 
-    it 'returns a article with the same id as in the request' do
+    it 'returns an article with the same id as in the request' do
       expect(client.article(2).id).to eq(2)
     end
   end

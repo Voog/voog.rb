@@ -20,28 +20,28 @@ module Voog
         get "articles/#{id}", {query: params}
       end
 
-      # Create a article
+      # Create an article
       #
       # @see http://www.voog.com/developers/api/resources/articles#create_article
       def create_article(data)
         post 'articles', data
       end
 
-      # Update a article
+      # Update an article
       #
       # @see http://www.voog.com/developers/api/resources/articles#update_article
       def update_article(id, data)
         put "articles/#{id}", data
       end
 
-      # Patch a article
+      # Patch an article
       #
       # @see http://www.voog.com/developers/api/resources/articles#patch_article
       def patch_article(id, data)
         patch "articles/#{id}", data
       end
 
-      # Delete a article
+      # Delete an article
       #
       # @see http://www.voog.com/developers/api/resources/articles#remove_article
       def delete_article(id)
@@ -82,7 +82,7 @@ module Voog
         content(Voog::API::Contents::ParentKind::Article, article_id, id, params)
       end
 
-      # Create a article content for article
+      # Create an article content for article
       #
       # @see http://www.voog.com/developers/api/resources/contents#create_content
       def create_article_content(article_id, data)

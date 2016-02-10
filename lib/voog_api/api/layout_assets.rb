@@ -22,7 +22,7 @@ module Voog
 
       # Create a layout asset
       #
-      # @option data [String] :data file content (used text based files only - e. g. .css, .js)
+      # @option data [String] :data file content (used only for text-based files, e.g. .css and .js files)
       # @option data [String] :file path to file location (used for binary files only)
       # @see http://www.voog.com/developers/api/resources/layout_assets#create_layout_asset
       def create_layout_asset(data)
