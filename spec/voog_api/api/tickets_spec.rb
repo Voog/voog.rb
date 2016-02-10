@@ -51,4 +51,17 @@ describe Voog::API::Tickets do
       assert_requested :delete, 'http://voog.test/admin/api/forms/1/tickets/delete_spam'
     end
   end
+
+  describe '#delete_tickets' do
+
+    before do
+      request_fixture(:delete, 'forms/1/tickets/delete_tickets')
+    end
+
+    it 'calls delete method on ticket' do
+      client.delete_tickets(1)
+      assert_requested :delete, 'http://voog.test/admin/api/forms/1/tickets/delete_tickets'
+    end
+  end
+
 end

@@ -33,6 +33,14 @@ module Voog
       def delete_spam_tickets(form_id)
         delete "forms/#{form_id}/tickets/delete_spam"
       end
+
+      # Delete all or set of ticket for form
+      #
+      # @option params [Array] :ticket_ids array of ticket id that should be removed. All tickets are deleted when this parameter is not provided.
+      # @see http://www.voog.com/developers/api/resources/tickets#delete_tickets
+      def delete_tickets(form_id, params = {})
+        delete "forms/#{form_id}/tickets/delete_tickets", {query: params}
+      end
     end
   end
 end
