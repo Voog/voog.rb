@@ -20,6 +20,7 @@ require 'voog_api/api/site'
 require 'voog_api/api/pages'
 require 'voog_api/api/people'
 require 'voog_api/api/search'
+require 'voog_api/api/site_users'
 require 'voog_api/api/tags'
 require 'voog_api/api/texts'
 require 'voog_api/api/tickets'
@@ -47,6 +48,7 @@ module Voog
     include Voog::API::People
     include Voog::API::Search
     include Voog::API::Site
+    include Voog::API::SiteUsers
     include Voog::API::Tags
     include Voog::API::Texts
     include Voog::API::Tickets
