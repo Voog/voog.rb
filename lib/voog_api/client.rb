@@ -26,7 +26,10 @@ require 'voog_api/api/texts'
 require 'voog_api/api/tickets'
 
 module Voog
-  
+
+  # Voog API client.
+  #
+  # @see http://www.voog.com/developers/api
   class Client
 
     MAX_PER_PAGE = 250
@@ -136,6 +139,8 @@ module Voog
     end
 
     # Fetch all elements for requested API resource when {#auto_paginate} is turned on.
+    #
+    # @see http://www.voog.com/developers/api/basics/pagination
     def paginate(url, options = {}, &block)
       opts = options.dup
       if @auto_paginate || @per_page

@@ -1,7 +1,7 @@
 module Voog
   class API
 
-    # Manage users who have access to password protected pages.
+    # Voog Site Users API methods. Manage users who have access to password protected pages.
     #
     # @see http://www.voog.com/support/guides/managing-your-website-pages/password-protected-pages
     # @see http://www.voog.com/developers/api/resources/site_users
