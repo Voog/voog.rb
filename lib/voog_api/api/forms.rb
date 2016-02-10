@@ -26,6 +26,13 @@ module Voog
       def update_form(id, data)
         put "forms/#{id}", data
       end
+
+      # Delete a form
+      #
+      # @see http://www.voog.com/developers/api/resources/forms#delete_form
+      def delete_form(id)
+        delete "forms/#{id}"
+      end
     end
   end
 end

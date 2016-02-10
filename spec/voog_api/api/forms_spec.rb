@@ -38,4 +38,16 @@ describe Voog::API::Forms do
       expect(client.update_form(2, title: 'Updated title', submit_label: 'Send!').title).to eq('Updated title')
     end
   end
+
+  describe '#delete_form' do
+
+    before do
+      request_fixture(:delete, 'forms/2')
+    end
+
+    it 'calls delete method on form' do
+      client.delete_form(2)
+      assert_requested :delete, 'http://voog.test/admin/api/forms/2'
+    end
+  end
 end
