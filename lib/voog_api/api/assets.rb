@@ -30,8 +30,8 @@ module Voog
       # Confirm an asset upload
       #
       # @see http://www.voog.com/developers/api/resources/assets#confirm_asset
-      def confirm_asset(id)
-        put "assets/#{id}/confirm", nil
+      def confirm_asset(id, params = {})
+        put "assets/#{id}/confirm", params
       end
 
       # Delete an asset
