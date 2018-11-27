@@ -144,6 +144,7 @@ module Voog
     def paginate(url, options = {}, &block)
       opts = options.dup
       if @auto_paginate || @per_page
+        opts[:query] ||= {}
         opts[:query][:per_page] ||= @per_page || (@auto_paginate ? MAX_PER_PAGE : nil)
       end
 
