@@ -81,7 +81,7 @@ module Voog
     def get(url, options = {})
       request :get, url, nil, options
     end
-    
+
     def post(url, data, options = {})
       request :post, url, data, options
     end
@@ -101,7 +101,7 @@ module Voog
     def head(url, options = {})
       request :head, url, nil, options
     end
-    
+
     def api_endpoint
       "#{host_with_protocol}/admin/api".freeze
     end
@@ -109,7 +109,7 @@ module Voog
     def host_with_protocol
       "#{protocol}://#{host}".freeze
     end
-    
+
     def agent
       @agent ||= Sawyer::Agent.new(api_endpoint, sawyer_options) do |http|
         http.headers[:content_type] = 'application/json'
@@ -129,7 +129,7 @@ module Voog
         faraday.headers[:user_agent] = 'Voog.rb Ruby wrapper'
       end
     end
-    
+
     def last_response
       @last_response
     end
@@ -162,16 +162,16 @@ module Voog
       end
 
       data
-     end
+    end
 
     private
-    
+
     def request(method, path, data, options = {})
       multipart = options.fetch(:multipart, false) && (method == :post)
 
       @last_response = response = multipart ? \
         multipart_agent.post("#{api_endpoint}/#{path}", data) : \
-        agent.call(method, URI.encode(path.to_s), data, options.dup)
+        agent.call(method, URI.parse(path.to_s), data, options.dup)
 
       raise Voog::MovedPermanently.new(response, host_with_protocol) if response.status == 301
 
