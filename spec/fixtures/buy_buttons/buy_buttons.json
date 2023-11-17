@@ -1,0 +1,78 @@
+[
+  {
+    "id": 1,
+    "created_at": "2023-11-17T12:55:36.000Z",
+    "updated_at": "2023-11-17T12:55:36.000Z",
+    "settings": {
+      "title": "Add to cart",
+      "button_style": "with_price"
+    },
+    "url": "http://voog.test/admin/api/buy_buttons/1",
+    "content": {
+      "id": 1,
+      "name": "body",
+      "created_at": "2023-11-17T12:55:36.000Z",
+      "updated_at": "2023-11-17T12:55:36.000Z",
+      "position": 1,
+      "url": "http://voog.test/admin/api/pages/1/contents/1"
+    },
+    "parent": {
+      "id": 1,
+      "title": "Home",
+      "created_at": "2023-11-17T12:55:36.000Z",
+      "updated_at": "2023-11-17T12:55:36.000Z",
+      "type": "page",
+      "url": "http://voog.test/admin/api/pages/1"
+    },
+    "product": {
+      "id": 1,
+      "name": "Product",
+      "price": "100.0",
+      "status": "live",
+      "created_at": "2023-11-17T12:55:36.000Z",
+      "updated_at": "2023-11-17T12:55:36.000Z",
+      "sku": "product-sku",
+      "uses_variants": false,
+      "tax_rate": "20.0",
+      "in_stock": true
+    }
+  },
+  {
+    "id": 2,
+    "created_at": "2023-11-17T12:56:36.000Z",
+    "updated_at": "2023-11-17T12:56:36.000Z",
+    "settings": {
+      "title": "Add to cart",
+      "button_style": "with_price"
+    },
+    "url": "http://voog.test/admin/api/buy_buttons/2",
+    "content": {
+      "id": 2,
+      "name": "body",
+      "created_at": "2023-11-17T12:56:36.000Z",
+      "updated_at": "2023-11-17T12:56:36.000Z",
+      "position": 1,
+      "url": "http://voog.test/admin/api/pages/1/contents/2"
+    },
+    "parent": {
+      "id": 1,
+      "title": "Home",
+      "created_at": "2023-11-17T12:55:36.000Z",
+      "updated_at": "2023-11-17T12:55:36.000Z",
+      "type": "page",
+      "url": "http://voog.test/admin/api/pages/1"
+    },
+    "product": {
+      "id": 1,
+      "name": "Product",
+      "price": "100.0",
+      "status": "live",
+      "created_at": "2023-11-17T12:55:36.000Z",
+      "updated_at": "2023-11-17T12:55:36.000Z",
+      "sku": "product-sku",
+      "uses_variants": false,
+      "tax_rate": "20.0",
+      "in_stock": true
+    }
+  }
+]

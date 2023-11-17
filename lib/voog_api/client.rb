@@ -5,6 +5,7 @@ require 'voog_api/error'
 
 require 'voog_api/api/articles'
 require 'voog_api/api/assets'
+require 'voog_api/api/buy_buttons'
 require 'voog_api/api/comments'
 require 'voog_api/api/content_partials'
 require 'voog_api/api/contents'
@@ -36,6 +37,7 @@ module Voog
 
     include Voog::API::Articles
     include Voog::API::Assets
+    include Voog::API::BuyButtons
     include Voog::API::Comments
     include Voog::API::ContentPartials
     include Voog::API::Contents
