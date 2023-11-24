@@ -1,0 +1,12 @@
+{
+  "id": 2,
+  "active": true,
+  "regexp": false,
+  "source": "/other-page",
+  "destination": "/new-other-page",
+  "redirect_type": 301,
+  "complexity": 1005,
+  "created_at": "2023-11-24T10:23:49.000Z",
+  "updated_at": "2023-11-24T10:23:49.000Z",
+  "url": "http://voog.test/admin/api/redirect_rules/2"
+}

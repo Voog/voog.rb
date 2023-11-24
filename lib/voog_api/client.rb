@@ -13,16 +13,17 @@ require 'voog_api/api/element_definitions'
 require 'voog_api/api/elements'
 require 'voog_api/api/forms'
 require 'voog_api/api/languages'
-require 'voog_api/api/layouts'
 require 'voog_api/api/layout_assets'
+require 'voog_api/api/layouts'
 require 'voog_api/api/media_sets'
 require 'voog_api/api/nodes'
-require 'voog_api/api/site'
 require 'voog_api/api/pages'
 require 'voog_api/api/people'
 require 'voog_api/api/product_widgets'
+require 'voog_api/api/redirect_rules'
 require 'voog_api/api/search'
 require 'voog_api/api/site_users'
+require 'voog_api/api/site'
 require 'voog_api/api/tags'
 require 'voog_api/api/texts'
 require 'voog_api/api/tickets'
@@ -46,13 +47,14 @@ module Voog
     include Voog::API::Elements
     include Voog::API::Forms
     include Voog::API::Languages
-    include Voog::API::Layouts
     include Voog::API::LayoutAssets
+    include Voog::API::Layouts
     include Voog::API::MediaSets
     include Voog::API::Nodes
     include Voog::API::Pages
     include Voog::API::People
     include Voog::API::ProductWidgets
+    include Voog::API::RedirectRules
     include Voog::API::Search
     include Voog::API::Site
     include Voog::API::SiteUsers
