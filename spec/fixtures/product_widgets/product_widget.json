@@ -1,0 +1,41 @@
+{
+  "id": 2,
+  "created_at": "2023-11-17T13:26:47.000Z",
+  "updated_at": "2023-11-17T13:26:47.000Z",
+  "content_settings": {
+    "category_ids": [],
+    "sort_order": "created_at-desc"
+  },
+  "design_settings": {
+    "layout": "grid",
+    "columns": 3,
+    "item_width": 300,
+    "item_height": 600,
+    "mask_content_overflow": true,
+    "show_navigation_buttons": true,
+    "mobile_columns": 2,
+    "show_cart_button": true,
+    "show_price": true,
+    "show_product_filters": true,
+    "product_count": 56,
+    "show_discount_label": false,
+    "show_discount_percentage": false
+  },
+  "url": "http://voog.test/admin/api/product_widgets/2",
+  "content": {
+    "id": 2,
+    "name": "body",
+    "created_at": "2023-11-17T12:56:36.000Z",
+    "updated_at": "2023-11-17T12:56:36.000Z",
+    "position": 1,
+    "url": "http://voog.test/admin/api/pages/1/contents/2"
+  },
+  "parent": {
+    "id": 1,
+    "title": "Home",
+    "created_at": "2023-11-17T12:55:36.000Z",
+    "updated_at": "2023-11-17T12:55:36.000Z",
+    "type": "page",
+    "url": "http://voog.test/admin/api/pages/1"
+  }
+}
