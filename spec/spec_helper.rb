@@ -1,11 +1,12 @@
 require 'voog_api'
 require 'webmock/rspec'
+require 'pathname'
 
 WebMock.disable_net_connect!
 
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
-  
+
   config.treat_symbols_as_metadata_keys_with_true_values = true
   config.run_all_when_everything_filtered = true
   config.filter_run :focus
@@ -30,14 +31,16 @@ def fixture(file)
 end
 
 def request_fixture(method, path, options = {})
-  request = ({
-    headers: {'X-API-TOKEN' => 'afcf30182aecfc8155d390d7d4552d14'}
-  }).merge(options.fetch(:request, {}))
-  
+  request = {
+    headers: {
+      'X-API-TOKEN' => 'afcf30182aecfc8155d390d7d4552d14'
+    }
+  }
+
   response = ({headers: {'Content-Type' => 'application/json'}}).tap { |response|
     response[:body] = fixture(options[:fixture]) if options.has_key?(:fixture)
   }.merge(options.fetch(:response, {}))
-  
+
   stub_request(method, voog_url(path)).with(request).to_return(response)
 end
 

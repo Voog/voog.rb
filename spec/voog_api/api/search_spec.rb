@@ -6,7 +6,7 @@ describe Voog::API::Search do
 
   describe '#people' do
     before do
-      request_fixture(:get, 'search', request: {q: 'any kind of content'}, fixture: 'search/search')
+      request_fixture(:get, 'search', request: {query: {q: 'any kind of content'}}, fixture: 'search/search')
     end
 
     it 'returns a list of search results' do
