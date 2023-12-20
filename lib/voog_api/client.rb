@@ -1,5 +1,10 @@
 require 'json'
 require 'sawyer'
+require 'faraday'
+
+if ::Gem::Requirement.new('>= 2.0').satisfied_by?(::Gem::Version.new(Faraday::VERSION))
+  require 'faraday/multipart'
+end
 
 require 'voog_api/error'
 
