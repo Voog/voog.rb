@@ -23,4 +23,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rake'
 
   spec.add_dependency 'sawyer', '~> 0.9'
+  spec.add_dependency 'faraday', '>= 0.9', '< 3'
+  spec.add_dependency 'faraday-multipart', '> 0' if RUBY_VERSION >= '2.4'
 end
