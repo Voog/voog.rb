@@ -6,11 +6,11 @@ require 'voog_api/version'
 Gem::Specification.new do |spec|
   spec.name          = 'voog_api'
   spec.version       = Voog::VERSION
-  spec.authors       = ['Priit Haamer', 'Mikk Pristavka', 'Tanel Jakobsoo']
-  spec.email         = ['priit@edicy.com', 'mikk@fraktal.ee', 'tanel@fraktal.ee']
+  spec.authors       = ['Priit Haamer', 'Mikk Pristavka', 'Tanel Jakobsoo', 'Peeter Paal']
+  spec.email         = ['priit@edicy.com', 'mikk@voog.com', 'tanel@voog.com', 'peeter@voog.com']
   spec.description   = %q{Best API wrapper for the best website builder}
   spec.summary       = %q{Ruby toolkit for the Voog API}
-  spec.homepage      = 'https://github.com/Edicy/voog.rb'
+  spec.homepage      = 'https://github.com/Voog/voog.rb'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files`.split($/)
